@@ -1,39 +1,39 @@
-VER=1.4.0-M2
+VER=1.4.0-RC2
 
-MAC_URL=https://ci.appveyor.com/api/buildjobs/ahrbl4qjo0jko1ci/artifacts/client%2Ftarget%2Fbin%2Fsbtn
+MAC_URL=https://ci.appveyor.com/api/buildjobs/2dtog78246xs1yn3/artifacts/client%2Ftarget%2Fbin%2Fsbtn
 
-WINDOWS_URL=https://ci.appveyor.com/api/buildjobs/77m655luaj8xencg/artifacts/client%2Ftarget%2Fbin%2Fsbtn.exe
+LINUX_URL=https://ci.appveyor.com/api/buildjobs/m1l8upcrdj2ah5km/artifacts/client%2Ftarget%2Fbin%2Fsbtn
 
-LINUX_URL=https://ci.appveyor.com/api/buildjobs/g26p768sh4b90u76/artifacts/client%2Ftarget%2Fbin%2Fsbtn
+WINDOWS_URL=https://ci.appveyor.com/api/buildjobs/72gjh3fbbpu5ubd2/artifacts/client%2Ftarget%2Fbin%2Fsbtn.exe
 
 # cd /tmp
 # mkdir sbtn
 # cd sbtn
 
-mkdir darwin-amd64
-mkdir linux-amd64
-mkdir windows-amd64
+mkdir x86_64-apple-darwin
+mkdir x86_64-pc-linux
+mkdir x86_64-pc-win32
 
-curl -L $MAC_URL > darwin-amd64/sbtn
-curl -L $LINUX_URL > linux-amd64/sbtn
-curl -L $WINDOWS_URL > windows-amd64/sbtn.exe
+curl -L $MAC_URL > x86_64-apple-darwin/sbtn
+curl -L $LINUX_URL > x86_64-pc-linux/sbtn
+curl -L $WINDOWS_URL > x86_64-pc-win32/sbtn.exe
 
-cd darwin-amd64
+cd x86_64-apple-darwin
 chmod +x sbtn
-tar czvf sbtn-darwin-amd64-$VER.tar.gz sbtn
-mv sbtn-darwin-amd64-$VER.tar.gz ../
+tar czvf sbtn-x86_64-apple-darwin-$VER.tar.gz sbtn
+mv sbtn-x86_64-apple-darwin-$VER.tar.gz ../
 cd ../
-gpg -u 0x642ac823 --detach-sign --armor sbtn-darwin-amd64-$VER.tar.gz
+gpg -u 0x642ac823 --detach-sign --armor sbtn-x86_64-apple-darwin-$VER.tar.gz
 
-cd linux-amd64
+cd x86_64-pc-linux
 chmod +x sbtn
-tar czvf sbtn-linux-amd64-$VER.tar.gz sbtn
-mv sbtn-linux-amd64-$VER.tar.gz ../
+tar czvf sbtn-x86_64-pc-linux-$VER.tar.gz sbtn
+mv sbtn-x86_64-pc-linux-$VER.tar.gz ../
 cd ../
-gpg -u 0x642ac823 --detach-sign --armor sbtn-linux-amd64-$VER.tar.gz
+gpg -u 0x642ac823 --detach-sign --armor sbtn-x86_64-pc-linux-$VER.tar.gz
 
-cd windows-amd64
-zip sbtn-windows-amd64-$VER.zip sbtn.exe
-mv sbtn-windows-amd64-$VER.zip ../
+cd x86_64-pc-win32
+zip sbtn-x86_64-pc-win32-$VER.zip sbtn.exe
+mv sbtn-x86_64-pc-win32-$VER.zip ../
 cd ../
-gpg -u 0x642ac823 --detach-sign --armor sbtn-windows-amd64-$VER.zip
+gpg -u 0x642ac823 --detach-sign --armor sbtn-x86_64-pc-win32-$VER.zip
