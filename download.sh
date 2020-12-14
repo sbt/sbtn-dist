@@ -1,10 +1,10 @@
-VER=1.4.4
+VER=1.4.5
 
-MAC_URL=https://ci.appveyor.com/api/buildjobs/bvla560x2v3p2gdm/artifacts/client%2Ftarget%2Fbin%2Fsbtn
+MAC_URL=https://ci.appveyor.com/api/buildjobs/ruigr3j84oxc7dxr/artifacts/client%2Ftarget%2Fbin%2Fsbtn
 
-WINDOWS_URL=https://ci.appveyor.com/api/buildjobs/yuhiwx9c69bv6nnf/artifacts/client%2Ftarget%2Fbin%2Fsbtn.exe
+WINDOWS_URL=https://ci.appveyor.com/api/buildjobs/jlea6hrrvh636bec/artifacts/client%2Ftarget%2Fbin%2Fsbtn.exe
 
-LINUX_URL=https://ci.appveyor.com/api/buildjobs/cceyukq7lao7a01k/artifacts/client%2Ftarget%2Fbin%2Fsbtn
+LINUX_URL=https://ci.appveyor.com/api/buildjobs/kyfi02j2n4qtvyef/artifacts/client%2Ftarget%2Fbin%2Fsbtn
 
 # cd /tmp
 # mkdir sbtn
