@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macOS-latest, ubuntu-latest, windows-latest]
+        os: [macOS-latest, ubuntu-latest, windows-2019]
         include:
           # Replace "example" with the name your binary
           - os: macOS-latest
@@ -21,9 +21,9 @@ jobs:
           - os: ubuntu-latest
             uploaded_filename: sbtn-x86_64-pc-linux
             local_path: client/target/bin/sbtn
-          - os: windows-latest
+          - os: windows-2019
             uploaded_filename: sbtn-x86_64-pc-win32.exe
-            local_path: client/target/bin/sbtn.exe
+            local_path: client\target\bin\sbtn.exe
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
@@ -44,21 +44,15 @@ jobs:
           path: ~/.sbt
           key: ${{ runner.os }}-sbt-cache-${{ hashFiles('**/*.sbt') }}-${{ hashFiles('project/build.properties') }}
       - run: git fetch --tags || true
-      - name: Non-Windows build
-        shell: bash
-        if: ${{ matrix.os != 'windows-latest' }}
-        run: |
-          sbt "-Dsbt.io.virtual=false" nativeImage
       - run: echo $(pwd)
         shell: bash
       - name: Setup Windows C++ toolchain
         uses: ilammy/msvc-dev-cmd@v1
-        if: ${{ matrix.os == 'windows-latest' }}
-      - name: Windows build
+        if: ${{ matrix.os == 'windows-2019' }}
+      - name: Build
         shell: bash
-        if: ${{ matrix.os == 'windows-latest' }}
         run: |
-          sbt "-Dsbt.io.virtual=false" nativeImage
+          sbt nativeImage
       - uses: actions/upload-artifact@v2
         with:
           path: ${{ matrix.local_path }}
