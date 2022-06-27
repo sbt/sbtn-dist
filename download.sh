@@ -1,10 +1,10 @@
-VER=1.4.7
+VER=1.7.0-RC1
 
-MAC_URL=https://ci.appveyor.com/api/buildjobs/0syjvhebsirvxrvk/artifacts/client%2Ftarget%2Fbin%2Fsbtn
+MAC_URL=https://github.com/sbt/sbtn-dist/releases/download/v${VER}/sbtn-x86_64-apple-darwin
 
-WINDOWS_URL=https://ci.appveyor.com/api/buildjobs/j9deq8cqor36n4o2/artifacts/client%2Ftarget%2Fbin%2Fsbtn.exe
+WINDOWS_URL=https://github.com/sbt/sbtn-dist/releases/download/v${VER}/sbtn-x86_64-pc-win32.exe
 
-LINUX_URL=https://ci.appveyor.com/api/buildjobs/ugdf69s43p0l5tgq/artifacts/client%2Ftarget%2Fbin%2Fsbtn
+LINUX_URL=https://github.com/sbt/sbtn-dist/releases/download/v${VER}/sbtn-x86_64-pc-linux
 
 # cd /tmp
 # mkdir sbtn
