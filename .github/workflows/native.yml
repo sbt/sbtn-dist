@@ -44,7 +44,7 @@ jobs:
         shell: bash
         run: |
           echo $(pwd)
-          sbt client/clean nativeImage
+          sbt clean nativeImage
       - uses: actions/upload-artifact@v3
         with:
           path: ${{ matrix.local_path }}
