@@ -1,0 +1,73 @@
+name: Native Image
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+  release:
+    types: [published]
+jobs:
+  unix:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macOS-latest, ubuntu-latest, windows-latest]
+        include:
+          # Replace "example" with the name your binary
+          - os: macOS-latest
+            uploaded_filename: sbtn-x86_64-apple-darwin
+            local_path: client/target/bin/sbtn
+          - os: ubuntu-latest
+            uploaded_filename: sbtn-x86_64-pc-linux
+            local_path: client/target/bin/sbtn
+          - os: windows-latest
+            uploaded_filename: sbtn-x86_64-pc-win32.exe
+            local_path: client\target\bin\sbtn.exe
+    env:
+      JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
+      BUILD_VERSION: ${{ github.event.release.name }}
+    steps:
+      - name: Checkout sbt/sbt
+        uses: actions/checkout@v2
+        with:
+          repository: sbt/sbt
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: temurin
+          java-version: 8
+      - name: Coursier cache
+        uses: coursier/cache-action@v6
+      - name: Cache sbt
+        uses: actions/cache@v2.1.6
+        with:
+          path: ~/.sbt
+          key: ${{ runner.os }}-sbt-cache-${{ hashFiles('**/*.sbt') }}-${{ hashFiles('project/build.properties') }}
+      - run: git fetch --tags || true
+      - name: Non-Windows build
+        run: sbt nativeImage
+        shell: bash
+        if: ${{ matrix.os != 'windows-latest' }}
+      - run: echo $(pwd)
+        shell: bash
+      - name: Windows build
+        shell: cmd
+        if: ${{ matrix.os == 'windows-latest' }}
+        run: >-
+          "C:\Program Files (x86)\Microsoft Visual
+          Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat" && sbt nativeImage
+      - uses: actions/upload-artifact@v2
+        with:
+          path: ${{ matrix.local_path }}
+          name: ${{ matrix.uploaded_filename }}
+      - name: Upload release
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ matrix.local_path }}
+          asset_name: ${{ matrix.uploaded_filename }}
+          asset_content_type: application/zip
