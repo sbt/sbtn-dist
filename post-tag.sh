@@ -1,4 +1,10 @@
-VER=1.8.0
+#!/bin/bash -e
+
+VER=1.8.1-M1
+
+rm -rf target || true
+mkdir -p target
+mkdir -p target/temp
 
 BASE_URL=https://github.com/sbt/sbtn-dist/releases/download/v${VER}
 
@@ -14,15 +20,17 @@ LINUX_AARCH64_URL=$BASE_URL/sbtn-aarch64-pc-linux
 # mkdir sbtn
 # cd sbtn
 
-mkdir x86_64-apple-darwin
-mkdir x86_64-pc-linux
-mkdir aarch64-pc-linux
-mkdir x86_64-pc-win32
+mkdir -p target/x86_64-apple-darwin
+mkdir -p target/x86_64-pc-linux
+mkdir -p target/aarch64-pc-linux
+mkdir -p target/x86_64-pc-win32
 
-curl -L $MAC_URL > x86_64-apple-darwin/sbtn
-curl -L $LINUX_X86_64_URL > x86_64-pc-linux/sbtn
-curl -L $LINUX_AARCH64_URL > aarch64-pc-linux/sbtn
-curl -L $WINDOWS_URL > x86_64-pc-win32/sbtn.exe
+curl -L $MAC_URL > target/x86_64-apple-darwin/sbtn
+curl -L $LINUX_X86_64_URL > target/x86_64-pc-linux/sbtn
+curl -L $LINUX_AARCH64_URL > target/aarch64-pc-linux/sbtn
+curl -L $WINDOWS_URL > target/x86_64-pc-win32/sbtn.exe
+
+cd target
 
 cd x86_64-apple-darwin
 chmod +x sbtn
