@@ -12,20 +12,23 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macOS-latest, ubuntu-latest, ubuntu-22.04, windows-2019]
         include:
           - os: macOS-latest
             uploaded_filename: sbtn-x86_64-apple-darwin
             local_path: client/target/bin/sbtn
-          - os: ubuntu-latest
+            jobtype: 1
+          - os: ubuntu-20.04
             uploaded_filename: sbtn-x86_64-pc-linux
             local_path: client/target/bin/sbtn
-          - os: ubuntu-22.04
+            jobtype: 1
+          - os: ubuntu-20.04
             uploaded_filename: sbtn-aarch64-pc-linux
             local_path: client/target/bin/sbtn
+            jobtype: 2
           - os: windows-2019
             uploaded_filename: sbtn-x86_64-pc-win32.exe
             local_path: client\target\bin\sbtn.exe
+            jobtype: 1
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
@@ -54,7 +57,7 @@ jobs:
         uses: uraimo/run-on-arch-action@v2.5.0
         with:
           arch: aarch64
-          distro: ubuntu22.04
+          distro: ubuntu20.04
 
           # Speeds up builds per the run-on-arch-action README
           githubToken: ${{ github.token }}
