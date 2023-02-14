@@ -1,6 +1,9 @@
-macos_arm64_task:
+task:
   name: Build sbtn for macOS ARM64
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-
+  coursier_cache:
+    folder: $HOME/Library/Caches/Coursier/v1
+  sbt_cache:
+    folder: $HOME/.sbt
   script: arch -arm64 ./.cirrus/publish-macos-silicon.sh
