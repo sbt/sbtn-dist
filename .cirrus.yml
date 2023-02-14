@@ -6,4 +6,6 @@ task:
     folder: $HOME/Library/Caches/Coursier/v1
   sbt_cache:
     folder: $HOME/.sbt
-  script: arch -arm64 ./.cirrus/publish-macos-silicon.sh
+  build_script: arch -arm64 ./.cirrus/publish-macos-silicon.sh
+  binary_artifacts:
+    path: "sbt/client/target/bin/sbtn"
