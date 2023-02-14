@@ -1,0 +1,6 @@
+macos_arm64_task:
+  name: Build sbtn for macOS ARM64
+  macos_instance:
+    image: ghcr.io/cirruslabs/macos-ventura-base:latest
+
+  script: arch -arm64 ./.cirrus/publish-macos-silicon.sh
