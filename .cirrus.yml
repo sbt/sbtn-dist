@@ -8,4 +8,7 @@ task:
     folder: $HOME/.sbt
   build_script: arch -arm64 ./.cirrus/publish-macos-silicon.sh
   binary_artifacts:
+    name: Binary assets
     path: "sbt/client/target/bin/sbtn"
+  env:
+    GITHUB_TOKEN: ENCRYPTED[1a9fb5ccdb681945d16d5c461d5d77ae13701992dab353f0c97b01d8d7f98e3b41b731063a9a5ba15daf10b943af5dc6]
