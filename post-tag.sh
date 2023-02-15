@@ -8,7 +8,9 @@ mkdir -p target/temp
 
 BASE_URL=https://github.com/sbt/sbtn-dist/releases/download/v${VER}
 
-MAC_URL=$BASE_URL/sbtn-x86_64-apple-darwin
+MAC_X86_64_URL=$BASE_URL/sbtn-x86_64-apple-darwin
+
+MAC_AARCH64_URL=$BASE_URL/sbtn-aarch64-apple-darwin
 
 WINDOWS_URL=$BASE_URL/sbtn-x86_64-pc-win32.exe
 
@@ -21,11 +23,13 @@ LINUX_AARCH64_URL=$BASE_URL/sbtn-aarch64-pc-linux
 # cd sbtn
 
 mkdir -p target/x86_64-apple-darwin
+mkdir -p target/aarch64-apple-darwin
 mkdir -p target/x86_64-pc-linux
 mkdir -p target/aarch64-pc-linux
 mkdir -p target/x86_64-pc-win32
 
-curl -L $MAC_URL > target/x86_64-apple-darwin/sbtn
+curl -L $MAC_X86_64_URL > target/x86_64-apple-darwin/sbtn
+curl -L $MAC_AARCH64_URL > target/aarch64-apple-darwin/sbtn
 curl -L $LINUX_X86_64_URL > target/x86_64-pc-linux/sbtn
 curl -L $LINUX_AARCH64_URL > target/aarch64-pc-linux/sbtn
 curl -L $WINDOWS_URL > target/x86_64-pc-win32/sbtn.exe
@@ -38,6 +42,13 @@ tar czvf sbtn-x86_64-apple-darwin-$VER.tar.gz sbtn
 mv sbtn-x86_64-apple-darwin-$VER.tar.gz ../
 cd ../
 gpg -u 0x642ac823 --detach-sign --armor sbtn-x86_64-apple-darwin-$VER.tar.gz
+
+cd aarch64-apple-darwin
+chmod +x sbtn
+tar czvf sbtn-aarch64-apple-darwin-$VER.tar.gz sbtn
+mv sbtn-aarch64-apple-darwin-$VER.tar.gz ../
+cd ../
+gpg -u 0x642ac823 --detach-sign --armor sbtn-aarch64-apple-darwin-$VER.tar.gz
 
 cd x86_64-pc-linux
 chmod +x sbtn
