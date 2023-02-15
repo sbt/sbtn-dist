@@ -1,11 +1,16 @@
 #!/bin/bash -ex
 
+# Branch of sbt to build
+BRANCH_TO_BUILD=try-cirrus-ci
+
+# Set up sbt and a JDK
 brew install sbt
 
-git clone --branch try-cirrus-ci https://github.com/scalacenter/sbt.git
-
+# Clone sbt repository
+git clone --branch $BRANCH_TO_BUILD https://github.com/scalacenter/sbt.git
 cd sbt
 
+# Build sbtn native image
 sbt clean nativeImage
 
 if [[ "$CIRRUS_RELEASE" == "" ]]; then
