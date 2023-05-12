@@ -1,7 +1,7 @@
 #!/bin/bash -ex
 
 # Branch of sbt to build
-BRANCH_TO_BUILD=1.8.x
+BRANCH_TO_BUILD=1.9.x
 
 # Set up sbt and a JDK
 brew install sbt
