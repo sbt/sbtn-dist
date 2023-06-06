@@ -28,7 +28,6 @@ fpath=client/target/bin/sbtn
 name=sbtn-aarch64-apple-darwin
 
 echo "Uploading $fpath..."
-name="$(basename "$fpath")-"
 url_to_upload="https://uploads.github.com/repos/$CIRRUS_REPO_FULL_NAME/releases/$CIRRUS_RELEASE/assets?name=$name"
 curl -X POST \
   --data-binary @$fpath \
