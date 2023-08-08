@@ -82,6 +82,7 @@ jobs:
 
           mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.deb"
 
+
           ls "$LINUX_BINARIES_FOLDER"
       - name: Build Linux aarch64
         if: ${{ matrix.uploaded_filename == 'sbtn-aarch64-pc-linux' }}
