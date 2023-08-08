@@ -63,7 +63,7 @@ jobs:
           LINUX_BINARIES_FOLDER=target/linux-binaries
 
           ## Create binaries
-          sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=true rpm:packageBin debian:packageBin
+          sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=false -Dsbt.build.includesbtn=false -Dsbt.build.includesbtlaunch=false rpm:packageBin debian:packageBin
 
           ## Move binaries to linux-binaries folder
           mkdir -p $LINUX_BINARIES_FOLDER
@@ -72,7 +72,6 @@ jobs:
           RPM_ARTIFACT_PARENT=target/rpm/RPMS/noarch
           RPM_ARTIFACT_NAME="sbt-$LATEST_TAG-0.noarch.rpm"
           RPM_ARTIFACT="$RPM_ARTIFACT_PARENT/$RPM_ARTIFACT_NAME"
-          RPM_NEW_NAME=$(echo "$RPM_ARTIFACT_NAME" | sed -r 's/-(.*)\.(.*).rpm/.rpm/')
 
           mv "$RPM_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.rpm"
 
