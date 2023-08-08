@@ -66,7 +66,7 @@ jobs:
           sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=true rpm:packageBin debian:packageBin
 
           ## Move binaries to linux-binaries folder
-          rm -r $LINUX_BINARIES_FOLDER
+          rm -rf $LINUX_BINARIES_FOLDER
           mkdir -p $LINUX_BINARIES_FOLDER
 
           RPM_ARTIFACT_PARENT=target/rpm/RPMS/noarch
