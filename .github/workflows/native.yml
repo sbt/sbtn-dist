@@ -60,12 +60,12 @@ jobs:
           cd launcher-package
 
           LATEST_TAG=$(git tag --sort=taggerdate | tail -1 | sed 's/^v//')
-          LINUX_BINARIES_FOLDER=target/linux-binaries
+          LINUX_BINARIES_FOLDER=target/linux-packages
 
           ## Create binaries
           sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=false -Dsbt.build.includesbtn=false -Dsbt.build.includesbtlaunch=false rpm:packageBin debian:packageBin
 
-          ## Move binaries to linux-binaries folder
+          ## Move binaries to linux-packages folder
           mkdir -p $LINUX_BINARIES_FOLDER
           rm -rf "$LINUX_BINARIES_FOLDER/*"
 
@@ -80,9 +80,7 @@ jobs:
           DEBIAN_ARTIFACT="$DEBIAN_ARTIFACT_PARENT/$DEBIAN_ARTIFACT_NAME"
 
           mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.deb"
-
-
-          ls "$LINUX_BINARIES_FOLDER"
+          ls -lh "$LINUX_BINARIES_FOLDER"
       - name: Build Linux aarch64
         if: ${{ matrix.uploaded_filename == 'sbtn-aarch64-pc-linux' }}
         uses: uraimo/run-on-arch-action@v2.5.0
@@ -113,13 +111,18 @@ jobs:
         with:
           path: ${{ matrix.local_path }}
           name: ${{ matrix.uploaded_filename }}
+          if-no-files-found: error
+          retention-days: 2
 
       - name: Upload Linux packages
         if: ${{ matrix.uploaded_filename == 'sbtn-x86_64-pc-linux' }}
         uses: actions/upload-artifact@v3
         with:
           name: linux-packages
-          path: launcher-package/target/linux-binaries/
+          path: launcher-package/target/linux-packages/
+          if-no-files-found: error
+          retention-days: 2
+
       - name: Upload release
         if: github.event_name == 'release'
         uses: actions/upload-release-asset@v1.0.2
@@ -130,3 +133,32 @@ jobs:
           asset_path: ${{ matrix.local_path }}
           asset_name: ${{ matrix.uploaded_filename }}
           asset_content_type: application/zip
+  repository-update:
+    needs: native-image
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout rochala/sbtn-dist
+      uses: actions/checkout@v3
+      with:
+        repository: rochala/sbtn-dist
+    - name: Fetch artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: linux-packages
+    - name: Unpack artifacts
+      run: |
+        ls -lh
+        tar -xzf linux-package.zip
+        rm linux-package.zip
+        ls -lh
+    - name: Update debian artifacts
+      run: |
+        echo "Updated debian artifacts"
+    - name: Update rpm artifacts
+      run: |
+        echo "Updated rpm artifacts"
+    - name: Commit changes
+      run: |
+        echo "Commited changes"
+
+
