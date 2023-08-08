@@ -67,7 +67,7 @@ jobs:
 
           ## Move binaries to linux-binaries folder
           mkdir -p $LINUX_BINARIES_FOLDER
-          rm -r "$LINUX_BINARIES_FOLDER/*"
+          rm -rf "$LINUX_BINARIES_FOLDER/*"
 
           RPM_ARTIFACT_PARENT=target/rpm/RPMS/noarch
           RPM_ARTIFACT_NAME="sbt-$LATEST_TAG-0.noarch.rpm"
