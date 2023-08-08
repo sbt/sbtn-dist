@@ -145,17 +145,16 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: linux-packages
-    - name: Unpack artifacts
-      run: |
-        ls -lh
-        tar -xzf linux-package.zip
-        rm linux-package.zip
-        ls -lh
+        path: artifacts
     - name: Update debian artifacts
       run: |
+        mv ./artifacts/*.deb ./debian
+        ls -lh ./debian
         echo "Updated debian artifacts"
     - name: Update rpm artifacts
       run: |
+        mv ./artifacts/*.rpm ./rpm
+        ls -lh ./rpm
         echo "Updated rpm artifacts"
     - name: Commit changes
       run: |
