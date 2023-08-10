@@ -154,7 +154,7 @@ jobs:
         PGP_SECRET: ${{ secrets.PGP_SECRET }}
     - name: Update debian artifacts
       run: |
-        sh ./updateDebianPackages.sh
+        ./updateDebianPackages.sh
         echo "Updated debian artifacts"
         ls -lh ./debian
       env:
@@ -162,7 +162,7 @@ jobs:
         KEYNAME: ${{ secrets.KEYNAME }}
     - name: Update rpm artifacts
       run: |
-        sh ./updateRpmPackages.sh
+        ./updateRpmInDocker.sh
         echo "Updated rpm packages"
         ls -lh ./rpm
       env:

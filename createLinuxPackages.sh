@@ -1,27 +1,27 @@
 #!/usr/bin/env bash 
-set -euo pipefail
 
+echo $(pwd)
 cd launcher-package
 
 LATEST_TAG=$(git tag --sort=taggerdate | tail -1 | sed 's/^v//')
-LINUX_BINARIES_FOLDER=target/linux-binaries
+LINUX_BINARIES_FOLDER=target/linux-packages
 
 ## Create binaries
-sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=true rpm:packageBin debian:packageBin
+sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=false -Dsbt.build.includesbtn=false -Dsbt.build.includesbtlaunch=false rpm:packageBin debian:packageBin
 
-## Move binaries to linux-binaries folder
-mkdir -p target/linux-binaries || true
+## Move binaries to linux-packages folder
+mkdir -p $LINUX_BINARIES_FOLDER
+rm -rf "$LINUX_BINARIES_FOLDER/*"
 
 RPM_ARTIFACT_PARENT=target/rpm/RPMS/noarch
 RPM_ARTIFACT_NAME="sbt-$LATEST_TAG-0.noarch.rpm"
-RPM_ARTIFACT="$RPM_ARTIFACT_PARENT/$RPM_ARTIFACT"
-RPM_NEW_NAME=$(echo "$RPM_ARTIFACT_NAME" | sed -r 's/-(.*)\.(.*).rpm/.rpm/')
+RPM_ARTIFACT="$RPM_ARTIFACT_PARENT/$RPM_ARTIFACT_NAME"
 
-mv "$RPM_ARTIFACT" "$LINUX_BINARIES_FOLDER/$RPM_NEW_NAME"
+mv "$RPM_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.rpm"
 
 DEBIAN_ARTIFACT_PARENT=target/
-DEBIAN_ARTIFACT_NAME="sbt_$LATEST_TAG_all.deb"
+DEBIAN_ARTIFACT_NAME="sbt_${LATEST_TAG}_all.deb"
 DEBIAN_ARTIFACT="$DEBIAN_ARTIFACT_PARENT/$DEBIAN_ARTIFACT_NAME"
-DEBIAN_NEW_NAME=$(echo $DEBIAN_ARTIFACT_NAME | sed 's/_all//' | sed 's/_/-/')
 
-mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER/$DEBIAN_NEW_NAME"
+mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.deb"
+ls -lh "$LINUX_BINARIES_FOLDER"
