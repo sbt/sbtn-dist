@@ -164,6 +164,8 @@ jobs:
       run: |
         ./updateRpmInDocker.sh
         echo "Updated rpm packages"
+        echo "Adjusting file permissions"
+        sudo chown -R $(id -u):$(id -g) ./rpm
         ls -lh ./rpm
       env:
         PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
