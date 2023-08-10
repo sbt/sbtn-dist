@@ -1,0 +1,20 @@
+Package: sbt
+Architecture: all
+Version: 1.9.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eed3si9n@gmail.com>
+Installed-Size: 49
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: ./sbt-1.9.3.deb
+Size: 20032
+MD5sum: 796a97f39263d6993e68334a90aa43a8
+SHA1: ed5a332ca4c307f2aa50cf74f1ffa46fe751d6f6
+SHA256: 94c3237d212ccfb5cb2ae32a4bae692f006bf815aeb89859cc753862b55dc11f
+SHA512: cf0ca43fe65596448a08f7625423170c1d8d608c40c519e462cb55f488e8037604874fd57564cfa9728a55d3d5433eb6cf40fa99b7586a1f75cd08fda464aa28
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+

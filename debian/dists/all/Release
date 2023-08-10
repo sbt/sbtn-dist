@@ -1,0 +1,13 @@
+Date: Thu, 10 Aug 2023 15:57:31 +0000
+MD5Sum:
+ f365b5259ac8313133300a43be187d04               38 dists/all/Release
+ 3edc7b520505ebfdc6bce9fcdb4795d1              660 dists/all/main/binary-all/Packages
+SHA1:
+ b8637eee5de08bed577e68b634e1c2a73b7e6ed3               38 dists/all/Release
+ 33fb1e3d463c3e366ffbf0e0484bcddd773131d2              660 dists/all/main/binary-all/Packages
+SHA256:
+ 3ee408bbfc5aaa90b8210a917e9cc8c028ff304c6c37ff057433eac82b921dce               38 dists/all/Release
+ 44fb2c951ab467cfd47784d039da54881da53df54d8bec074843b3479e4c211b              660 dists/all/main/binary-all/Packages
+SHA512:
+ edbd995ddb86f823805221802145926f847fdf9d30c49e31eac538f7099d60735e43dc63646fc7540c442631c8411fb470c0a4e02b50c8a5de11114b8b0f9654               38 dists/all/Release
+ 295a915d94c74c41685cd10c33adacfa8bcf8cf5792fa4e600a1a9a32fe09898e1abe0564c7c950df2691c1b4dd62555a2f8a8a4209c2066920df7f335371b0d              660 dists/all/main/binary-all/Packages
