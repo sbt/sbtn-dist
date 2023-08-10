@@ -1,7 +1,7 @@
 #!/usr/bin/env bash 
 
 docker run -td \
-  -v "/home/rochala/sbt/sbtn-dist:/sbtn-dist" \
+  -v "$(pwd):/sbtn-dist" \
   -w "/sbtn-dist" \
   --env PGP_SECRET \
   --env PGP_PASSPHRASE \
