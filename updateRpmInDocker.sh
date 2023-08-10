@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker run -td \
+docker run \
   -v "$(pwd):/sbtn-dist" \
   -w "/sbtn-dist" \
   --env PGP_SECRET \
