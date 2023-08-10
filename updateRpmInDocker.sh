@@ -1,4 +1,4 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
 docker run -td \
   -v "$(pwd):/sbtn-dist" \
@@ -9,4 +9,4 @@ docker run -td \
   --env KEYGRIP \
   --privileged \
   fedora \
-  "sh ./updateRpmPackages.sh"
+  sh ./updateRpmPackages.sh
