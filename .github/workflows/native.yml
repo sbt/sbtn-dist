@@ -146,18 +146,37 @@ jobs:
       with:
         name: linux-packages
         path: artifacts
+    - name: Move artifacts
+      run: |
+    - name: GPG setup
+      run: .github/scripts/gpg-setup.sh
+      env:
+        PGP_SECRET: ${{ secrets.PGP_SECRET }}
     - name: Update debian artifacts
       run: |
-        mv ./artifacts/*.deb ./debian
-        ls -lh ./debian
+        sh ./updateDebianPackages.sh
         echo "Updated debian artifacts"
+        ls -lh ./debian
+      env:
+        PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+        KEYNAME: ${{ secrets.KEYNAME }}
     - name: Update rpm artifacts
       run: |
-        mv ./artifacts/*.rpm ./rpm
+        sh ./updateRpmPackages.sh
+        echo "Updated rpm packages"
         ls -lh ./rpm
-        echo "Updated rpm artifacts"
-    - name: Commit changes
+      env:
+        PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+        KEYGRIP: ${{ secrets.KEYGRIP }}
+        PGP_SECRET: ${{ secrets.PGP_SECRET }}
+        GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v5
+    - name: Check outputs
+      if: ${{ steps.cpr.outputs.pull-request-number }}
       run: |
-        echo "Commited changes"
+        echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+        echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
 
 

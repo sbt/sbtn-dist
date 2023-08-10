@@ -1,4 +1,5 @@
-!#/bin/bash
+#!/usr/bin/env bash 
+set -euo pipefail
 
 cd launcher-package
 
@@ -9,7 +10,7 @@ LINUX_BINARIES_FOLDER=target/linux-binaries
 sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=true rpm:packageBin debian:packageBin
 
 ## Move binaries to linux-binaries folder
-mkdir -p target/linux-binaries
+mkdir -p target/linux-binaries || true
 
 RPM_ARTIFACT_PARENT=target/rpm/RPMS/noarch
 RPM_ARTIFACT_NAME="sbt-$LATEST_TAG-0.noarch.rpm"
