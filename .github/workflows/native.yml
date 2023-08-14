@@ -166,6 +166,13 @@ jobs:
         KEYGRIP: ${{ secrets.KEYGRIP }}
         PGP_SECRET: ${{ secrets.PGP_SECRET }}
         GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+    - name: Check outputs
+      if: ${{ steps.cpr.outputs.pull-request-number }}
+      run: |
+        echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+        echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
     # - name: Test debian artifactory
     # - name: Test rpm artifactory
     # - name: Autocommit changes
