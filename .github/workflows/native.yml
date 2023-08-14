@@ -164,6 +164,7 @@ jobs:
       env:
         PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
         KEYGRIP: ${{ secrets.KEYGRIP }}
+        KEYNAME: ${{ secrets.KEYNAME }}
         PGP_SECRET: ${{ secrets.PGP_SECRET }}
         GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
     - name: Test debian artifactory
