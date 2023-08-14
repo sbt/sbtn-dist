@@ -1,0 +1,37 @@
+Acquire-By-Hash: yes
+Architectures: all
+Codename: all
+Components: main
+Date: Mon, 14 Aug 2023 11:47:07 +0000
+Description: native script to run sbt, a build tool for Scala and more
+Label: Scala-sbt
+Origin: Scala-sbt
+Suite: all
+MD5Sum:
+ b0204f303da390aa7604d639e6d81254              226 debian/dists/all/Release
+ 50f07592c9ca56065fbe200198d3e65e              399 debian/dists/all/main/Contents-all
+ 813b669676f83f8ea82a006d80802f12              164 debian/dists/all/main/Contents-all.gz
+ 5f055be2fccd4ce263851e2f8adfa0fb              672 debian/dists/all/main/binary-all/Packages
+ b5313ee2d74ea1ebb8fe366b9f37c70a              538 debian/dists/all/main/binary-all/Packages.bz2
+ de3dfb3139734e2ad86141ef069a7b68              507 debian/dists/all/main/binary-all/Packages.gz
+SHA1:
+ d19fe4dda4bde20b9ead1d79fee47e8fd1e0d9b2              226 debian/dists/all/Release
+ 26ccad4d4370b4b2d22db69424bfcf5f6db734cc              399 debian/dists/all/main/Contents-all
+ d353d011f853a5a2e679e980047f0f9bb4910dd3              164 debian/dists/all/main/Contents-all.gz
+ 05d11473dc13fce4039f450d9220fa3c29db3b62              672 debian/dists/all/main/binary-all/Packages
+ 6c56880c37ad98742243b73bb4407e4a0031de8b              538 debian/dists/all/main/binary-all/Packages.bz2
+ f8609a39ba5e1f7ead3c0d8821d7e634ccbbf5ee              507 debian/dists/all/main/binary-all/Packages.gz
+SHA256:
+ 2e5cdc416f0e68c3abe2c80d942e7aa8dd4b4c233f6e5f66aebfb080de0d09ab              226 debian/dists/all/Release
+ 517b4d01dc83d2779cb20885bf407f6fc3743f274f0ae1465398741841ac5c8e              399 debian/dists/all/main/Contents-all
+ 93f908fd3201ff172cafbe355a1436a77f7b43c123786264811121f53e9b3762              164 debian/dists/all/main/Contents-all.gz
+ 8304bd049faac6235d23e0e63d94790fece70ed840d5fc7b33bbaf9a82aa1e7c              672 debian/dists/all/main/binary-all/Packages
+ 11600d0ae08eadbeaa07ffb21344f10c45409945b42f6708d631cbba09dd34d4              538 debian/dists/all/main/binary-all/Packages.bz2
+ 560d433816eccd51a81554a27c353f6b824904a80a829d98ecec189406358090              507 debian/dists/all/main/binary-all/Packages.gz
+SHA512:
+ b4d8a0f41582aa424ba694e0ae6a99d2d22fffa20c4c85f6150d6d93bfb4c1c054ba57736609c49535e96c08c1c166e39ac45d0749219a18e10ca7f3a13390e9              226 debian/dists/all/Release
+ 87996d8b3c0c5890907b250340a299533fdeb6e6a2b16d4f735641bffb84d2b4b8ae29fb10583eda77db99cef6b2ef7f5c8ec113d8350762ddc3026e730f7732              399 debian/dists/all/main/Contents-all
+ 430599f576f76817b38d71a385208516c9b14a93b71ba647e632d394757a8beaac72dd51e2fe517aa410692f7f9e5a8eed074d82f7dc5fb9f697ef34be8381d8              164 debian/dists/all/main/Contents-all.gz
+ fb3e780041a5128e279e4513a8a95cfbe8ea371c35509d4b8928d6112a34af9496644c3c1e0870b9e16fadd2602ac007d7c46807d9f1106039f52976149f29fe              672 debian/dists/all/main/binary-all/Packages
+ d99b636b7d0a40e9e5d1dde222d735b04442f507b1facf7c02a082d07292e0f0e4b46068aa1ba4b55075728db73c9fdc0cc7445ed0141ce0e9ac725bf7edc978              538 debian/dists/all/main/binary-all/Packages.bz2
+ 272bd05ea987ff2c12dcdd4ae5f17527b44e05b9c2eab701c7cc558382ac19425518299ca286127a4a2ae09967630c1e028633347a2269f91066077e2414d5de              507 debian/dists/all/main/binary-all/Packages.gz
