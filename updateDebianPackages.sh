@@ -3,9 +3,10 @@ set -euo pipefail
 
 TARGET_DIR="./debian/dists/all/main"
 
-mv ./artifacts/*.deb ./debian/pool/main || true
-
+mkdir -p "./debian/pool/main" || true
 mkdir -p "$TARGET_DIR/binary-all" || true
+
+mv ./artifacts/*.deb ./debian/pool/main
 
 rm ./debian-cache/packages-main-all.db || true
 rm -r "$TARGET_DIR/by-hash" || true
