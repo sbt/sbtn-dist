@@ -49,32 +49,7 @@ jobs:
       - name: Build Linux packages
         if: ${{ matrix.uploaded_filename == 'sbtn-x86_64-pc-linux' }}
         shell: bash
-        run: |
-          echo $(pwd)
-          cd launcher-package
-
-          LATEST_TAG=$(git tag --sort=taggerdate | tail -1 | sed 's/^v//')
-          LINUX_BINARIES_FOLDER=target/linux-packages
-
-          ## Create binaries
-          sbt -Dsbt.build.version=$LATEST_TAG -Dsbt.build.offline=false -Dsbt.build.includesbtn=false -Dsbt.build.includesbtlaunch=false rpm:packageBin debian:packageBin
-
-          ## Move binaries to linux-packages folder
-          mkdir -p $LINUX_BINARIES_FOLDER
-          rm -rf "$LINUX_BINARIES_FOLDER/*"
-
-          RPM_ARTIFACT_PARENT=target/rpm/RPMS/noarch
-          RPM_ARTIFACT_NAME="sbt-$LATEST_TAG-0.noarch.rpm"
-          RPM_ARTIFACT="$RPM_ARTIFACT_PARENT/$RPM_ARTIFACT_NAME"
-
-          mv "$RPM_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.rpm"
-
-          DEBIAN_ARTIFACT_PARENT=target/
-          DEBIAN_ARTIFACT_NAME="sbt_${LATEST_TAG}_all.deb"
-          DEBIAN_ARTIFACT="$DEBIAN_ARTIFACT_PARENT/$DEBIAN_ARTIFACT_NAME"
-
-          mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER"
-          ls -lh "$LINUX_BINARIES_FOLDER"
+        run: .github/scripts/createLinuxPackages.sh
       - name: Build Linux aarch64
         if: ${{ matrix.uploaded_filename == 'sbtn-aarch64-pc-linux' }}
         uses: uraimo/run-on-arch-action@v2.5.0
@@ -166,7 +141,11 @@ jobs:
         KEYGRIP: ${{ secrets.KEYGRIP }}
         PGP_SECRET: ${{ secrets.PGP_SECRET }}
         GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
-    - name: Generate token
+    - name: Test debian artifactory
+      run: .github/scripts/testDebianPackages.sh
+    - name: Test rpm artifactory
+      run: .github/scripts/testRpmPackages.sh
+    - name: Generate token for autocommit
       uses: tibdex/github-app-token@v1
       id: generate-token
       with:
@@ -181,8 +160,5 @@ jobs:
       run: |
         echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
         echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
-    # - name: Test debian artifactory
-    # - name: Test rpm artifactory
-    # - name: Autocommit changes
 
 

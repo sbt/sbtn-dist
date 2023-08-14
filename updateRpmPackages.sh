@@ -17,6 +17,7 @@ yum install rpm-sign createrepo -y
 GPG_NAME="_gpg-name $GPG_EMAIL"
 
 rpmsign --define "$GPG_NAME" --addsign ./rpm/*.rpm
+gpg --detach-sign --armor ./rpm/repodata/repomd.xml
 
 createrepo ./rpm
 

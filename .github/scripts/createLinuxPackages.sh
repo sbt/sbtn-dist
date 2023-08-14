@@ -1,4 +1,4 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
 echo $(pwd)
 cd launcher-package
@@ -23,5 +23,5 @@ DEBIAN_ARTIFACT_PARENT=target/
 DEBIAN_ARTIFACT_NAME="sbt_${LATEST_TAG}_all.deb"
 DEBIAN_ARTIFACT="$DEBIAN_ARTIFACT_PARENT/$DEBIAN_ARTIFACT_NAME"
 
-mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.deb"
+mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER"
 ls -lh "$LINUX_BINARIES_FOLDER"
