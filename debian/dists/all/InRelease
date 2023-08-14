@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 Acquire-By-Hash: yes
 Architectures: all
 Codename: all
@@ -35,3 +38,19 @@ SHA512:
  47cf88fbca6be937f247e0721e9ddfe78396a1468ff327ab303b9e0f1aa1a1a77ca40a885f564b876f4c07f92bf80996f190107f1fc70f1bab490fb7cacdaeea              672 main/binary-all/Packages
  42897f8ca149afc53cdaff36b2d34c4fffb65854dbf83f3d75fc1eddb6770ea3235898175cc686d977e6a0bbce7b1b68ba7c43e176c4edde3e1a42a9042878a0              541 main/binary-all/Packages.bz2
  57435c75b902e1f85b1ca869c56f4b7831d1f5aac8f33dcae14d0d712589df0db876b28d510dbf73c29832ee59f7f875bb916a0c5c38513239be19bd707a714c              509 main/binary-all/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEDhwktsd8yI9wMD1U7DtwIgrtAGwFAmTaKbIACgkQ7DtwIgrt
+AGw0RQ//VR73EW9SmGdFI9zmiFdLRSgJ30/5i9RpODc1V8L8XKtH/rNoBcyi7zNV
+CcHLoq1pm7D8GFsQATvDFd/xPczOu16EOeklJCtO8OBqlccdUDG0ceck/RfQtTrr
+mRb9OJ/2JRlIqBxPjriLVH68Xc0j1ptuj7hTMRcFBQg26M1XZLRCzfyRgauKHiEJ
+qvgBOzmUISU/FEhYMdpHF8wEtmGnV3++vUjh0o7fLYCqqEdMWIxQJ6H001XsJKxp
+fiIzFnVIMEjXMvbPxdID9J2b6dL26fiVZCpDOOOuJbH3lchAYsfgKegSpqc4BL18
+QzAHOE1pCAKTt6cRubSKex5NV2bv5RuxZFwaWbFrD0bEwQbJyund6USfxzbin3A+
+yPyPFaG9v9Ky/o3UcmYfDmHND5XU9k/HypS3AJfE+TkamulEM6lTbD++HgQQXN/J
++SpSo68D/JDEg6eByBuxBKw3aErgeXmm5Pn548Wk60tZLS+2Y3rIkXY30gxrk6mh
+tgskabWofDLHRbTs8mcPuf5CZ7yvhUm/5bmLww/V1QK1OnC0QzdYH2V5S0hU8qF/
+HoEszK13l7IYbdvKugRKT2yMOaiN6wJ8H4fzR85FTnndnx5W+uGX093Iq2ma03vk
++wPJUc848cP3HUv1ZT/67MOHOkRkYcSi3pHaH6o0SdSdxLA7w94=
+=x0f2
+-----END PGP SIGNATURE-----
