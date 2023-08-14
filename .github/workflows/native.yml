@@ -166,8 +166,16 @@ jobs:
         KEYGRIP: ${{ secrets.KEYGRIP }}
         PGP_SECRET: ${{ secrets.PGP_SECRET }}
         GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
+    - name: Generate token
+      uses: tibdex/github-app-token@v1
+      id: generate-token
+      with:
+        app_id: ${{ secrets.APP_ID }}
+        private_key: ${{ secrets.APP_PRIVATE_KEY }}
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ steps.generate-token.outputs.token }}
     - name: Check outputs
       if: ${{ steps.cpr.outputs.pull-request-number }}
       run: |
