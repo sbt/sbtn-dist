@@ -166,8 +166,8 @@ jobs:
         KEYGRIP: ${{ secrets.KEYGRIP }}
         PGP_SECRET: ${{ secrets.PGP_SECRET }}
         GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
-    - name: Test debian artifactory
-    - name: Test rpm artifactory
-    - name: Autocommit changes
+    # - name: Test debian artifactory
+    # - name: Test rpm artifactory
+    # - name: Autocommit changes
 
 
