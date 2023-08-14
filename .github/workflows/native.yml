@@ -1,16 +1,10 @@
 name: Native Image
-on:
-  push:
-    branches:
-      - develop
-  pull_request:
-  release:
-    types: [published]
+on: workflow_dispatch
 jobs:
   native-image:
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         include:
           # - os: macOS-latest
@@ -79,7 +73,7 @@ jobs:
           DEBIAN_ARTIFACT_NAME="sbt_${LATEST_TAG}_all.deb"
           DEBIAN_ARTIFACT="$DEBIAN_ARTIFACT_PARENT/$DEBIAN_ARTIFACT_NAME"
 
-          mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$LATEST_TAG.deb"
+          mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER"
           ls -lh "$LINUX_BINARIES_FOLDER"
       - name: Build Linux aarch64
         if: ${{ matrix.uploaded_filename == 'sbtn-aarch64-pc-linux' }}
@@ -172,21 +166,8 @@ jobs:
         KEYGRIP: ${{ secrets.KEYGRIP }}
         PGP_SECRET: ${{ secrets.PGP_SECRET }}
         GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
-
-    - name: Generate token
-      uses: tibdex/github-app-token@v1
-      id: generate-token
-      with:
-        app_id: ${{ secrets.APP_ID }}
-        private_key: ${{ secrets.APP_PRIVATE_KEY }}
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ steps.generate-token.outputs.token }}
-    - name: Check outputs
-      if: ${{ steps.cpr.outputs.pull-request-number }}
-      run: |
-        echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-        echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+    - name: Test debian artifactory
+    - name: Test rpm artifactory
+    - name: Autocommit changes
 
 

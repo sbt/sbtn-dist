@@ -1,0 +1,10 @@
+etc/sbt							    java/sbt
+usr/bin/sbt						    java/sbt
+usr/share/doc/sbt/changelog.gz				    java/sbt
+usr/share/doc/sbt/copyright				    java/sbt
+usr/share/man/man1/sbt.1.gz				    java/sbt
+usr/share/sbt/LICENSE					    java/sbt
+usr/share/sbt/NOTICE					    java/sbt
+usr/share/sbt/bin/sbt					    java/sbt
+usr/share/sbt/conf/sbtconfig.txt			    java/sbt
+usr/share/sbt/conf/sbtopts				    java/sbt
