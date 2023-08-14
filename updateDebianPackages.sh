@@ -44,5 +44,5 @@ for file in "${files_to_process[@]}"; do
     compute_hashes "$file"
 done
 
-echo ${PGP_PASSPHRASE} | gpg --batch --yes --passphrase-fd 0 --default-key "${KEYNAME}" -abs -o - dists/all/Release > dists/all/Release.gpg
-echo ${PGP_PASSPHRASE} | gpg --batch --yes --passphrase-fd 0 --default-key "${KEYNAME}" --clearsign -o - dists/all/Release > dists/all/InRelease
+echo ${PGP_PASSPHRASE} | gpg --batch --yes --passphrase-fd 0 --default-key "${KEYNAME}" -abs -o - debian/dists/all/Release > dists/all/Release.gpg
+echo ${PGP_PASSPHRASE} | gpg --batch --yes --passphrase-fd 0 --default-key "${KEYNAME}" --clearsign -o - debian/dists/all/Release > dists/all/InRelease
