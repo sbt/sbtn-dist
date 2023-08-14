@@ -7,6 +7,7 @@ docker run \
   --env PGP_PASSPHRASE \
   --env GPG_EMAIL \
   --env KEYGRIP \
+  --env KEYNAME \
   --privileged \
   fedora \
   sh ./updateRpmPackages.sh
