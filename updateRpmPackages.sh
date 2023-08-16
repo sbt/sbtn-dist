@@ -18,5 +18,7 @@ GPG_NAME="_gpg-name $GPG_EMAIL"
 
 rpmsign --define "$GPG_NAME" --addsign ./rpm/*.rpm
 
+
 createrepo ./rpm
 
+echo ${PGP_PASSPHRASE} | gpg --batch --yes --passphrase-fd 0 --default-key "${KEYNAME}" --detach-sign --armor - ./rpm/repodata/repomd.xml > ./rpm/repodata/repomd.xml.asc
