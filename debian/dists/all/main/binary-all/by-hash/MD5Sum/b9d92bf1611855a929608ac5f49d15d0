@@ -1,0 +1,1688 @@
+Package: sbt
+Architecture: all
+Version: 0.12.4-0.1-build-001
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1096
+Depends: curl, java2-runtime, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.12.4_all.deb
+Size: 985350
+MD5sum: c4aff49ca3bc2c4c3b1d4e316601d116
+SHA1: 20bb97e54c6e995aa65b4b5dd749a5aa91a47dc0
+SHA256: cca53de376129f5eb75b16fdec3ca0df8bdd435c4f4ef60665e3304b2e8a5fba
+SHA512: a342301e0be0c0b7655ba76cf455bbd8f431f9c034e3d1784e237ff4a15058d4f441863c30ab2269e7f477b688e86a8454f9eb00815e604bc5c9e501f67eb82d
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.0-0.1-build-001
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1121
+Depends: curl, java2-runtime, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.0_all.deb
+Size: 991438
+MD5sum: 2b56e2aafc4e4734f193b5fe79e722a7
+SHA1: d1d4d1e0cb59c4b448613deb7c9949952fa3cf9e
+SHA256: 459037e1fa7c039d631c017ae5ef952566552793e98b50932688ce8cf543fb4f
+SHA512: b1f2207a7735345e99447ff71dd0d91b820d9124b472c41b1b042951cfb8ef4199678d74dfdcc60671ea52fd1fc4642a22b9830b15f2a15ab16cffc65b18fe46
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.11
+Priority: optional
+Section: java
+Maintainer: Eugene Yokota <eugene.yokota@typesafe.com>
+Installed-Size: 1198
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.11_all.deb
+Size: 1034360
+MD5sum: dc44d05b4ad7e5b6da5a4ebeeb478318
+SHA1: 1d819443127cac5b9464c4d94f9bc41aaaed1e08
+SHA256: d621902bf188b367b66a3a95ab32e64c6c251956481a059deebe9e1d84699929
+SHA512: 17b9b3b3637aa226c6bcb5baddd37126c556666a09d6e14b17a34947767adad6ee9071734e7584b7688aa0b52199c90b438068d41b8c36fa22e6110738f0a117
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.12
+Priority: optional
+Section: java
+Maintainer: Eugene Yokota <eugene.yokota@typesafe.com>
+Installed-Size: 1198
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.12_all.deb
+Size: 1034428
+MD5sum: c029adb8a725d5ceee42e4e6911771ae
+SHA1: 72490353834fd6105fff0df5edae4e7c45c6f21b
+SHA256: 5fe636f6926f2d916a9a9e4b33ee9381469fa61f08e2be13c60660b5643d3f13
+SHA512: 2105afbf21f29df7fda92238237a7e43de3b3efd00b5a6cd8ba6ccb25e420a46c6003ea752543fc54e22aba302e64c64897a578a1ce6d76ac22fd6bd1af35734
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.13
+Priority: optional
+Section: java
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1199
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.13_all.deb
+Size: 1034388
+MD5sum: d36c7179b76396535aab25ab14ce78be
+SHA1: 7e2f3332938b34e4b58208754b36082e0ac91b1a
+SHA256: 9da3de6bafcd7878d373bb28204d44e88240676fc56090f85c5fd724737d9865
+SHA512: a2f3b6e612a3171ffd58f43c38dcf49cd58c0299d8816588a87b3d73451390f59008e02577b58703428c33c7f3ebf861c04eac2d40d5b7a64e7feb1ee22f4b2b
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.15.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 64630
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_0.13.15.2_all.deb
+Size: 66725378
+MD5sum: 587fd6ef277cc6ce4a8133681f92f9a2
+SHA1: 8150dbde4fbafb32281705df7ef937b5b405b545
+SHA256: 63f8955fd6d735d0c2737c5999d6e8652b26ab69d9e3cb402b01db7fbda5b7f7
+SHA512: 5d8d10a4ba8887080293946c3ac136e56901fdba9b6ce96f0f9145fdc5f6638e736f9b2a89c11334a5268e2ca71e7737b3b0ee4e5ce6fc9b37a961aa812e8069
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.15.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1206
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_0.13.15.3_all.deb
+Size: 1250838
+MD5sum: b0f4eae38207f22030d8c7e94edcec0c
+SHA1: 95ee2d4527f60e7932a1eb34181d22235565cf92
+SHA256: 0120ec1141de76ead369e2a3bb4c6f1ff324e5e93833fcdc5f33fda9c1752703
+SHA512: 8a5d150d59ad2cb639b1d360d756536f763fd0f601249a917ead16ad17b61ea936182d95914b5f5aeaec432d5c6a48c6aae58c69d4755a16f8b42600c1aa9c70
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.15
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 64767
+Depends: openjdk-8-jdk, bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_0.13.15_all.deb
+Size: 66879886
+MD5sum: 176c39781369b1857028f5e64805ccad
+SHA1: 2a35c1673a118e6abcae027f73f149e1332c81c5
+SHA256: b92878c1540bde4a4b046188b2b0159c7e60ec96c944d734d33156575f3a39b8
+SHA512: ece858ea7a52689b806d46c76db537d64565296e7cfe9c20831d44fada973993bd02336f57e0905531cf6b8020bde9f5cdf9bc1ecf17f6d5118347394ba44e37
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.16
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1206
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_0.13.16_all.deb
+Size: 1250836
+MD5sum: 2f9e09b92e74f009aa4a21850e04592f
+SHA1: a3d46f24de20cb59d35a65b74fc110bb10371eca
+SHA256: 43fc3e3ccfd32609aaa2d6c5af1dc6d4a2fe2249a4f771d33e9b4012d8b67c9a
+SHA512: 392231488470d4dae1a49274e75d897171a0adc682840945d9ec37353c6c9defdcdc7062d0568013eb7cbab8857a5d4fdaf3a21330ac063172b449de44e40a76
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.17
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1209
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_0.13.17_all.deb
+Size: 1261050
+MD5sum: d50ea591c0b6658d3c3dbca705069213
+SHA1: e9214a4659b34c68f79a391c2ac103380e07016d
+SHA256: 6b2ea0092c9bf0bae8f0282677e05592084a7b9e4ae4b4acfc64db1ec071676c
+SHA512: 43f01cab0a6e1627929370b65bd0a94ef8414854e623c31446848e844215dc048e5c64b77835d3ed662f64b2f965646e1c7a12874f14261bae4106539523dc28
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.18
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1216
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_0.13.18_all.deb
+Size: 1073044
+MD5sum: b495214b0505bfcf5f13e1275257233c
+SHA1: d9b835385ccd58c6da3c05d4be76243377e0c646
+SHA256: 9cfd2cedc12d7cf9ec7dcdae041ad6faaf0d52931c886b615b3075dc7f013d70
+SHA512: c59bf1608ae0908697758a8cf1a44023aa88f781a50089cbc381213460aeda36c44631af857d76f3f1d75baa1e1547d9c6c0fa4fa3708dba14fcf86d50be3900
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 0.13.1-0.1-build-001
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1130
+Depends: curl, java2-runtime, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.1_all.deb
+Size: 999300
+MD5sum: 4f7b52eb2bdedc0fced64e725577a75c
+SHA1: adbb23f784ffdd1c11058f2c66168f7e9df5979f
+SHA256: a879570304a7cc42820a6d4ee6e585e7060e8fe1a5135dd2bfb913d1a810d7cc
+SHA512: a084cc918ec5676cffdd14a0c0bddd567a26d85bd7000052acd1de3a2087d4f24c67dbad6c33f762680bad4022c9ee5e74fa1163cc64965ebd7edc9621d31775
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.2
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1171
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.2_all.deb
+Size: 1034862
+MD5sum: daa304595c0132c34b170b1e1a6b4044
+SHA1: 9b9779b0e47f0ad0e1038cd5c17a4befc73f4688
+SHA256: 95c24c9f66bb6eb8b0fd42a08782876d8cdc450880108bfc5e67e5df027eaccc
+SHA512: f012ff5a338427abc335d623f3e822efe70b045cfdc51b0f76f884936dc677d7f200f9809267de9e31a9208f9506fb8832ee53007a6a903abdac27344f166968
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.5
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1171
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.5_all.deb
+Size: 1015398
+MD5sum: 7fa5f4420fe54bc944aba29493ee907b
+SHA1: 7a28ef52fad410d52a91fe38f4a9b93a45b73813
+SHA256: c89d26ae4ce9b2572ae8587cbf887b196727a33e8b6cec2672358fb4c724af70
+SHA512: ce369515207c88881cee39066401c6d6937038e90ab4ebcfebea0ca4e6da357c5c9e3dafd19691dfbcf5e0de1db2daf088e4314e5765e442fa2d8c4f68a48695
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.6
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1204
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.6_all.deb
+Size: 1048204
+MD5sum: 2f6f8b966ef28e8ecd0b811efb868fd7
+SHA1: 5b4ac58569c9c025d439c42e8c474396978d87f5
+SHA256: 3d3904266baf77264e7bfadbea329a93d78dca3522009cb678f2e6e0f1c50fd2
+SHA512: d6fc1d9b911f71ceeba19bbb3991eddbe36312ff9706dee9329c1693e3ecb963df8b5a7b80290c1ad63cbed526015ed5cb1851d46bdf35c923746845e889bf01
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.7
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1195
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.7_all.deb
+Size: 1041408
+MD5sum: 9aa07aa5d9103c6eeb00a216cc19c106
+SHA1: e64a4722971a8d9448a0c82afa533abc6e06a698
+SHA256: 7b503a255e75f8678a43258beccef571a1cf751179ee9257fd5fd55b3aa498c5
+SHA512: 6edaa2dee46d3633cff956d33494f19115af33d4507f0e2c0dd7dd4bc7572bd241e5037927cf1baf7a8eb5afa9f63a0e1ebb219edb3c64238338fd06fb0f4d75
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.8
+Priority: optional
+Section: java
+Maintainer: Josh Suereth <joshua.suereth@typesafe.com>
+Installed-Size: 1195
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.8_all.deb
+Size: 1041400
+MD5sum: 5ddb1403591d1bcd914f7eb06f8d6453
+SHA1: 93de4e96b3ee832b011933940551cb6c060acd59
+SHA256: 7dc8308dc19cf6a8d6553a3800e772421451edafeffa7e03e00b7d4e67366866
+SHA512: 5a27c66085f2ed3eec614efa3f1a965d7241ca871a2ef9c90e8e618ec499debf5cd311874fd9764a60088de05b20427f0e0a80ba3ddcb74b46538e49b3086a89
+Description: Simple Build Tool for Scala-driven builds
+ This script provides a native way to run the Simple Build Tool,
+  a build tool for Scala software, also called SBT.
+
+Package: sbt
+Architecture: all
+Version: 0.13.9
+Priority: optional
+Section: java
+Maintainer: Eugene Yokota <eugene.yokota@typesafe.com>
+Installed-Size: 1197
+Depends: java6-runtime-headless, bash (>= 2.05a-11)
+Recommends: git
+Filename: pool/main/sbt_0.13.9_all.deb
+Size: 1034280
+MD5sum: 62cad0080017d65dc8526d6945eb3c6e
+SHA1: f5d554a661b0548010231631f9a54a3f29bb9161
+SHA256: 55b849e4e991f9f524ed88fafb1e15db5ad988670654e96b01c50d0c8af55cef
+SHA512: aaa0549045e459a1b0c33ee453109709d770fbb433b8dca9f0c0db058e06074eb05a61aa7d229efd3a8eeb33ba0c914c45300ea3185096e8a6747d3bee8ce5ef
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.0.0.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1207
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.0.0.1_all.deb
+Size: 1261048
+MD5sum: 128055f0013835ad720b79a9506f9fd7
+SHA1: 914cf5378a4517d81fbb0c27a9e832e125f8bafe
+SHA256: fb4c4eff244e0f558ef47452caa96cf7c5f92fb7306b30c53d99caa01fb53d41
+SHA512: 1d593ea76b553e789bce1857c9149b587a0bfbc0719931ebb203b83a4ad45dab4dec256ff885d33744357c0e01b4af5c7e6ccc2b2ccabdf25e96d84dc5d30e07
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.0.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1207
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.0.0_all.deb
+Size: 1261064
+MD5sum: 1bef55d77dfb454e8bfe178da8bfaa2c
+SHA1: 2fd114042555d9c15756f7a0f5c06b8545f9b3a8
+SHA256: 570b30a9b92c699fa08a44ed52c8f7e9b8692446918e5c3bc40ad5ae4e27c66b
+SHA512: 114cfe8c0a849f02d1cbca3208ea435b9f8d9185552c4701816a9846f30bf6272724c5bdc431fef42b2f7b5f30512b5f899ec2548a68b08f517f0d3c81c52cbc
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.0.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1207
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.0.1_all.deb
+Size: 1261046
+MD5sum: 13390ac103b74fa013b0912429e06618
+SHA1: 65fa016d944028592f80ee2611dc26e4aac1a7ed
+SHA256: fda790534b91ed40c05e4f09559e32f473591398533c6cf61340f2cc09cf18e5
+SHA512: 40f12e9bed5dbc2cdab97af37732581b930fe83d9b6c2ac8c965fba347128c77aabc81e2ebdeb6bfd33e8894bb9cf5f56f32457e029bcfa8bee22dcee8ee9206
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.0.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1207
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.0.2_all.deb
+Size: 1261046
+MD5sum: 1c2e190322a3b8babac79f0347661f68
+SHA1: a029097add53fa2e60aafc1c3b7523122c2dc69e
+SHA256: d1ce17678848c61e479306bc3bddb76607f9248a5f694ce81088e18b9428f851
+SHA512: af46373296fac97c2fd8c7cdd10162ac5e33c5e108ef0ef047a7f44460e6e29ff3822b2b8cc82409d881890a1963799da40d873f06020de4c35e5a224979cbc4
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.0.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1208
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.0.3_all.deb
+Size: 1261050
+MD5sum: 3e283914f8d4b2d2c270047569599ace
+SHA1: 952e47d5777c1ca70e8ecea0f77bb2d8df9d93a7
+SHA256: 33c6800688095f58ea1feb85dc8d7bd485bac76e5c6efd844c1b44889de4d6ec
+SHA512: 055abb46c4e01c41aea387a20653440fc21ffe2f77c296e37057707e0117745f35e6d2e48bd884633b0968d9cf640abc1159d8325bd8d3d9814ead1236d0c226
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.0.4
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1211
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.0.4_all.deb
+Size: 1261048
+MD5sum: 5e770ab5487dd8bffe6fbe2b2b9c4df4
+SHA1: 54e9f47c4f1d6ad4e72c283bb15a574224d4107f
+SHA256: 4948e7e78fe10b6e8fbac4685e582c7487062db1a01cfd1398e1876ee436b3d6
+SHA512: 96a201180119964384d1d8353eafb3d354a2c44a21abaf5b3e1847bc2390caafabdc7b73f02a8db56d65e6511d59f4dc60658055c16b938331ed16a1075cc9ba
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.1.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1211
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.1.0_all.deb
+Size: 1261048
+MD5sum: 41d03748a83ca0a3f4dd05274fe7e729
+SHA1: 2436ad9a88cc4d778401c192562092d78352cc58
+SHA256: 9ff9929348c87205e8178370a9e88b08cfe855e359ec5b7adec1aa0cd488d457
+SHA512: 98a356c465a60e13b19a14825209fe7bc8fba9ab9f52a2726c00d5cbeafd19cff16186881deee194da8d8426e555b5c587ad480b19b5ce73bc8843ddab6e580c
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.1.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1212
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.1.1_all.deb
+Size: 1261046
+MD5sum: e34dedec8151b6047b73b875717cfc99
+SHA1: 4b4ea9855fe53a53d98ecd938d937a4895b8debe
+SHA256: 68c76a81a0ed4cd6941a3eb0f688836bdc39afb6e09df1c6d1b23da5daddccee
+SHA512: 51c2e8b29d1458c257a660dc8bda78b06d1262f1f8ed23a57607531d5f0d9aab4ccec5d250c26bec41b65bb064bf5ce0c6094780628e2faf02c35227146998f9
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.1.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1215
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.1.2_all.deb
+Size: 1261048
+MD5sum: 6bac522435a82066b47f87a3ea836b49
+SHA1: 43d8a7c44e7ca356d2016c9a8d45439e0b064271
+SHA256: 7857c27c400d2908d647da5821cea1756cc033c19041b56ddd53038b5f7903a7
+SHA512: b5c0250e70b9af5f47d754ba7b7728168230b1dbc6f7d3ae3441e14036b2f18d9128ac5d226e45dc15afd8a469b8b9c8ef42e1cb6f0ee6164882018e03d88cd1
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.1.4
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1270
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.1.4_all.deb
+Size: 1322486
+MD5sum: 52f3bf5f5807d928fbd6d5c26b2f1557
+SHA1: c4a14789e2a83fd6b0c9c3e4350a28169352d307
+SHA256: 678502ba5c784a0f37820335035637ec5aa87b861ff859ea716de7f3ec8250eb
+SHA512: 211a96f08c136ec2752f3a5b78ee192c49ed44bcdae03bb19e42bf0f16c746b91f4cc8fee6c9903b2602e0622284cf44670e083b543602a28c55e4c8d21f6a23
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.1.5
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1270
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.1.5_all.deb
+Size: 1322490
+MD5sum: 2c0bee1882449ee924e9d21d7b329062
+SHA1: d28ef1138f2176557a16e890f0498ee46c542eaf
+SHA256: 7a4b35cc4defea54d28cd2bf57337875fc4ae007dece15916c099ec38442677f
+SHA512: 700af49cfe3339d0a6dddff9d698e9534d5fe3819f3861497497b587d373bcc81b88e33b15a0df4c5d1d5e1e09b4ad51f7668c69b51017f3c41697c0047be31c
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.1.6
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1270
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.1.6_all.deb
+Size: 1322488
+MD5sum: c0de09986f8ec619f2cd863b4eedc8dd
+SHA1: 557459078f41eb5f2a897dfe9ec4290e485e5b0b
+SHA256: 803ffa11f9983140d9f885d2f53a3ff26dfd75bfdca0d589281fa86038d56e29
+SHA512: 3f0119955991e3665424044fd10f33e8069ec24c9bffd20065ec5355c955eb10c46f81bc2dbbcb924a453aa1e78eb9e7c4ff0a5de28535f15e9b2dd860f1c5cf
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.2.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1271
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.2.0_all.deb
+Size: 1322486
+MD5sum: 9df68346fbdaae1dc7f199fda716a1ee
+SHA1: fb7eee1229eaef00966ad8c918acbefff4d2b162
+SHA256: 309277b13dc1e353d78cd0162cd05c525b209ae3387dac18e455bd1372010007
+SHA512: ef5f572dfa26380b2c7af290aa6458af6c2eb1a27544a700e4f82aded09831c1e17b8a9c9d47f714239acefb563ee34293646010d7e8ee88cd1a6ec3c040e6ef
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.2.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1271
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.2.1_all.deb
+Size: 1322486
+MD5sum: b84909522338c81e66a4c47c8d5284db
+SHA1: 8cbfcd721e28b82bb47ef322049f4cb2a43edcf7
+SHA256: 2d4403072fc81953337a929c5f0c0d935af830609b290e045cf10406492d1876
+SHA512: 1ce6af10d3f64bef156b319ba0531cb0554052d7c2d246c92f6fe8ad2a4a76fc7672eda99e406e77f41dcb7f9b3150024fc32af25715434c01f36bce67f9e5d4
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.2.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1271
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.2.3_all.deb
+Size: 1322484
+MD5sum: 1e2ddd30ecba66f7a8f717107ac5e8a7
+SHA1: a9d1f3071644b8b4660dfd9c6d76b41f8d17bee2
+SHA256: af1559efac5392d0f7d53de6d6d55c60b0fa47a31ed5ae01496c17867b3465bf
+SHA512: cf37aea90699127187103d4e306f748c88e3de7ffb6d506e0b3345a41cacedbec089712ebbe58a62d821b489bbac3208389221d95cdefd1163b3d96ffde957e5
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.2.4
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1271
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.2.4_all.deb
+Size: 1322486
+MD5sum: 6adc8cfc4dd2f89245f24d45af0140a4
+SHA1: e2e19bfc7110ed086e086c1d056d254a474f8f27
+SHA256: f4bf586483711e67e7a2cd3bed06427a2f466b49ec7c81a31c7cbd3388f28e2f
+SHA512: 88add52b805b281d4d76904353fbca501ccea8dd9fa265ae016229c9f0e2ec46db14d2ef289df812fafd8fa58a7398431ab966b546a0a4a8486426fa59b8024a
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.2.6
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1271
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.2.6_all.deb
+Size: 1322486
+MD5sum: 2242d7407d11bb1b28580b35cff44a49
+SHA1: f08f55d0199f048a5498c2a863176a679644ae7d
+SHA256: 39ac2b1de66455dc1eddf79ce5abeda2c98a6cd69f62624b73700288a59c6b80
+SHA512: 250e0fcde8577057e8c681ae0be59f8516db9d36f73da979f785ec44177169368a333bee67643c2940fe38fb8b0ff7b0746ae4255a672f84c2b36fb05ce6dd8a
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.2.7
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1272
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.2.7_all.deb
+Size: 1322488
+MD5sum: 3193dc9d39ebb49c848b7b7767ff6bb5
+SHA1: d5e1006e1f0b66d305c9ef1283c5200078e718b6
+SHA256: 22b94d6b4c80df2f354fe20cf5936bc48b0493ae7db3b9a48368704c4b5c75bd
+SHA512: 182fd89f8b65f458668c4144719f547a19e5d4223962f80f4552abb4553298ed0aaad9c9fdc8dbe0b91051ae5e30ac4209b76d338cc280b8c5d885c612ef37ec
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.2.8
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1272
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.2.8_all.deb
+Size: 1126438
+MD5sum: 2e37395e321d93ab9a1e26c4e4de7e40
+SHA1: 78cb0ebef15777b7567e5bbe4c5b59db062c9465
+SHA256: 23aaf484607855cd392154f3947f735ae62031b6fb6ee202bea50f0a5e47134c
+SHA512: b1dcb71fd716b79e0821c3d800c750374bae07a120f24b66071d6c1b2b6ea32c70a7d42a0cc17e496e341d3d669151cc2da3852eedede1cd282d366a364379ed
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1401
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.0_all.deb
+Size: 1232806
+MD5sum: d24b8b1e1329552d2a51cc329e9bd6f2
+SHA1: ffe61979581cfa04e83723cff58f218b6d4605d2
+SHA256: f5287b7c5de0329eb6aec225c7927174fed4f3e2d8878954a1ff8f31c7a9f670
+SHA512: bd2463f8084665653a4210f33ed12c3f9db011b44821e9854273d20ffc20ee1b7c0a10120c9165bb7ec54320a1f3f2c74c6901361b937949e475d5388af762f4
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.10
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.10_all.deb
+Size: 1233162
+MD5sum: 8bc358570eab275bc0f397947db17cd0
+SHA1: 8d6c38353d842380490c0122be8554b21a75b782
+SHA256: 8244933c0f9dbb42a648f441792942fcc78077f7df56f6c99c2736480a8c2ab7
+SHA512: c6b6d1c1d33b9c1e7050c2d946342ad12d576a518065c2f65415e16dd5d579d190fcb207f4d47c7507a25b605caa76f5f4b8bc63e7c679e5525721748973b7ba
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.12
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1406
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.12_all.deb
+Size: 1237076
+MD5sum: e9630c885a5c1dbfcc037f1466ef8582
+SHA1: 288bd4657f98a4d8facd11bb997687c917c240fe
+SHA256: 6c04f0024ef5a85db14bf9e105106dbcec33d0eab3fa0701d5f9e603a9024473
+SHA512: 12bda557d1946c54d8d67dde0de32ab79b950f57db3148be76594a8e71bde6fdc96c64d62c9a6b9030636fe386d865980279bc202203a7628ffaa3b04ab46598
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.13
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1407
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.13_all.deb
+Size: 1237208
+MD5sum: 8cf761fd11323e7a5e77667a96bf08b5
+SHA1: 9d804cc565fd9874173a0342fd903c3629968e44
+SHA256: 0d561b0b4714e23b9ed76865a20aa61b86ddbb8c19f14806c213135491617d7f
+SHA512: fc244d6bee949143d9621d6ab0d457f01531d0a37e8f79dea28cab8088f45b391975c511637fa91d099b5844cf63be67c5883312b569bf291656c089a6826007
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1401
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.1_all.deb
+Size: 1232698
+MD5sum: b0cac26232684405c101fedb3900ab3d
+SHA1: 566f124740092b850c2b4a06a365683a1d2b4a8b
+SHA256: ebbdc92945795378d67007b43c91633608eecb870597dffc2ec426a08d6793b4
+SHA512: 01a744201c5dd06e8c7b054ef1868f58daef187b65a55d31a9bbe459eedb6973bbcb3cd62097e2e0886651597a38369a0f778482f500c22d2f66a7b94b7bab72
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1401
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.2_all.deb
+Size: 1232688
+MD5sum: cf0c298070421fd114f434d21e66d77a
+SHA1: 9313463fc5e30dcce00ecd04215eaa2f7568d6cc
+SHA256: 64d55835d480f93905fe3f8abf03f515683125f690db6152a8cc89a56ea0ddba
+SHA512: 0eb1370b43a9bf2d0526eb750d746de7b0a73d81cdc45f82eaffd0b6c72e0b3823f63f8e4fc69d3b2b86627881706e91d0e82a0c59e724538e215ec523d450ea
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.3_all.deb
+Size: 1233138
+MD5sum: 73cd3cd74575a3f089e528005e100099
+SHA1: 1c9e7222cd3aa58e036dc619cb293e317becadee
+SHA256: 6eb75445592123efc72dbcd4ce3cea4e9ffa4b47cf5fc5a698e3edbfc71d4dc8
+SHA512: 785b909214f4773c15576d30628d1014e1a904b6bc11808bc2590a936d5fdc94f7efdb05bf50ec03bf7e445527e93af71b685a070f141d286153bf67b324df41
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.4
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.4_all.deb
+Size: 1233080
+MD5sum: f03bbe8a7d66a8b475ea702bfae422a7
+SHA1: 4bcbb660a3e73346f0c5ff0c4992c470082c79dc
+SHA256: a86d76155894c4cf4301ea0f9f7f9129f674965613e5903de52a1b429f9c6fa9
+SHA512: 4fed487d9baa5af64c3db1288066348c1565f3d381bfe8a724de05ced5e009ecf792ec798feaa2ce73fc8e3a0ffc83b33a8272405f095280dd545dbaed93320b
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.5
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.5_all.deb
+Size: 1233088
+MD5sum: d58d0229cf75973773a11b35341bfe97
+SHA1: 94edf8733053f65625d8d19368eb42287dfd4a67
+SHA256: daa82c0cb2180e526ff43534981031f17cc6a67cd692aa6166b680b1b00dc561
+SHA512: 30433f626d4d085dbcf7658749ce5926463e8919e87e3907bddaa910967b7498b55013bd96c7ba9be81232c38e45d51e3901904b98d7efd8492e3e01994e19a3
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.6
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.6_all.deb
+Size: 1233128
+MD5sum: 2bd9034bbbb57e4a035e261df5f76f1b
+SHA1: 9f86844382f095b81672ea4f82f96e7a39025352
+SHA256: 841e57ba2815dfc34456bee57ca2c902c2147385a9c4d7df6d514278cda69fa4
+SHA512: fafe702705c4d0c932603d9f05adbcef29bf8dbf902856d80e2828051da31677734dcff3b6f82f53b110f5cad20f636594156c11d3634a8d4a241e51ab0c4785
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.7.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.7.1_all.deb
+Size: 1233170
+MD5sum: 11fd95c7d780e3c318ebb3717636c6b4
+SHA1: 032810dfc72d3c45f155c843a3eb355cc16654d4
+SHA256: d1c06642d3950dd41e2b06b7dedc67706226ee9fc961c3545eca15c0c6edff4b
+SHA512: f4017e79ea841f4d8397eedee29994a5dc9ddbe6de9a27a7ab401ecc64f6032e365b8ce3aa8d9480b9901d7fecdab8dbcd53963698a7d233f794aa0c58064afa
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.7
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.7_all.deb
+Size: 1232974
+MD5sum: f0abe6de1baa51a6aaec8e2832dec406
+SHA1: 2cba279a7613514c0a8075eeddf5d070991d70f0
+SHA256: 571b5d72ba3507c4ff7d90076d47457aa05ff320e46eaf3cfe451ee28eb1cb77
+SHA512: 723e98ee6c06253edb8e945a7d7373e345687eadabea029ed402b2ab98bf1e271383008f7279706042559367a35baabe3191510e011ecd85f75f1b529fc47bbf
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.8
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.8_all.deb
+Size: 1233160
+MD5sum: 27fa7da7acd4a9837efae49cc406f5b4
+SHA1: 8726d5e67c4a0dad2470efc1395c587d81a7f81a
+SHA256: f9eb0d064e0061ab5020e0789809c672cdfa83c487362d79d8558d61658eb47b
+SHA512: c095167b130b21155f0c9c5d37f8fbfe33694e7a950cfb4604991822aaead20688a1d24c9c486129f9795d153b41bd45d17422bcf9325cd86af8052021426ab3
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.3.9
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1403
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.3.9_all.deb
+Size: 1233164
+MD5sum: d157d9ceffb73081b1b13ef6e89ea778
+SHA1: c0ff12c0f0549c5e03d330017b944b812b338710
+SHA256: 28f6ebb6eafe9e2ab1128d8a62efabe592380baa02f0cf0e33571d90dd7d9a56
+SHA512: 8950225e36762336b018fa65cd6989bc545aee5af429226a1f81290ca07e42bd8db158d8081d6f1279b066c7a989ada9e36dcd2c36504de2cd24dff280c8ed3b
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48747
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.0_all.deb
+Size: 18975964
+MD5sum: 36baaf1fa84d07580f8cab7699f52cb3
+SHA1: 7b4c620dcc9049c8693212884ecf7934b6f524b5
+SHA256: 4494defccdfdc51a2c53666b44e8ea4e6223161be7ceb53fdaf66a9f2af96cb7
+SHA512: 544c8828760837fbc376af7ed69839327620741c6e99672b96b91cd29d06c896f3bb1cab0612124f6531e735138b13ecb1f5440ace472f6ade63e80e771312b3
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48747
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.1_all.deb
+Size: 18976002
+MD5sum: 99a04215df87d2349abfbd9d93693655
+SHA1: a805d1111c58d5806c4e301c481b39024ee5f853
+SHA256: 69d5ef0859b3b936cad540250cefd5df17b5bf0a9ee73cf9175dc6593e1da4db
+SHA512: 346d7024b2119a59778cbe1bc1e6815fd8fcc7a90108f282844f796d35132d0f6f606ef3e9d5fa71c50f3885633cb9886d3f3f9a32ff85daed129c57ceb7931e
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1409
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.2_all.deb
+Size: 1232480
+MD5sum: 5e749679e9de4bd9fb307fd43e378763
+SHA1: 0ab072cff1aa04adf696d26a52cb4ba174c860ca
+SHA256: 4f8b9bb6c0d1c05f88bfb3322087c036ecea7470eeef309300edbe8c25fa995b
+SHA512: 61bdf06536fd32eaded31af36e19730b3d811d2852e23fa345c9cc8590b7c0f6a6dda36dda36851876619c6fff7116ddde89ecc99c7719edd0bef223cb595126
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1409
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.3_all.deb
+Size: 1232210
+MD5sum: 4614e90ed1a18ccb4c389b7791a8d565
+SHA1: dde760ba62c63da7f49b0c85fdf97cb84db5246e
+SHA256: 7acb17093c0c936dccb5e3da228d4da8eab563965058c6af2ea74e4061b67c4e
+SHA512: 862e57b44b3c9105c6dee58c9b2895e475ee9b3573dedbc2812c930575ba0db81291a876e9c46d2dd768756b28b5365c62d60da80157575a5f446f9ad3670a92
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.4
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1409
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.4_all.deb
+Size: 1232192
+MD5sum: 0d5427fac36800976c9aaad8092bd5aa
+SHA1: 9876ecc5517e214c7e194b5c01bc0bde1acb2c02
+SHA256: 4d4d3356bb7c7dc89b303e8a4bd053ee745ebe5daf67c8f009e2554173e1147d
+SHA512: 3ad05db4faaad9d2d4315094013f37bb9e3bc9582246a65570cf1ddf95f86d0d21c06b425821c1f4ad0d7e58c90b0366ffb3a2252aea511af6f75a3616c9f849
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.5
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1409
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.5_all.deb
+Size: 1232218
+MD5sum: e47aeddd728f5cc7ac1ad819d70a7f8e
+SHA1: 2e7100e1809a7fc9b65b4ba474188dc7602c7d45
+SHA256: 9785dc88f9e73552b8f165da3dbc743fc4a76671b97843a4ffefc3bfbe73a114
+SHA512: b7af7b38f4ce59cf341e70d09fe2584b17ba18d72bb5a8a25c39c88c83dddb765cb8eece9ae02b618f0f20cfae07fb35b7f091caf90537ddc0403a8f5da265cd
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.6
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1410
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.6_all.deb
+Size: 1233676
+MD5sum: 50c0e83f9ce17555b71a807b4a77df2e
+SHA1: 1449b0ab9be0de447214d65446ff51c147ec520a
+SHA256: 65f1817ea151ccf80e4a5c0d561b0efdc02a331944d3f3fea7e9b0b8830e4adc
+SHA512: e0369e3fa7d71af16d2f4e2091ff1e906294352e51157f26e2845533e609cd62e9f35ec0c7da8e0594d5bc4a869fcfa9e869dd479e6b4e24e966f0b69d52335d
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.7
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1411
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.7_all.deb
+Size: 1233698
+MD5sum: 672827557b05cdfd83e1796068dd41d4
+SHA1: 00b99148a774647dde1f6f42b616f3503922094d
+SHA256: defc30eb4635498dbb30eecd582abc147b14817a1ef11dd314b7b7031f6e156b
+SHA512: bcc8210ea560adfd83d0384a5b4bece83c12fe280de39ed30ecc69dabd33b32218369fe1b6539b58a85b9d3fab37bb97f973ae0f09996339fe5ac4c90e1f33cf
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.8
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1411
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.8_all.deb
+Size: 1233702
+MD5sum: d18edc254a94ae20434c3ea787a27cf8
+SHA1: dd6f9d80c0e177e25ae7536193cc41216d8568a0
+SHA256: a616a0320c141a4f5731e4af4a8acf145f50514d4c3750a23fbf9007e2958015
+SHA512: 62bd4856fc6a616d5775ba9f80ff7e17d5feabd7125785e0d5423daaaae736f956aa895687d674d8aa4809cce2da1f0c8c8ba35a9e20ffa626d92cdacf499428
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.4.9
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 1411
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.4.9_all.deb
+Size: 1233694
+MD5sum: 1efe26ed9da8b0386129c980625e0a12
+SHA1: d3e4a8d5af69732de549a8477321d926c3d47b4b
+SHA256: d0bbca96063ca14ed9d9c0763fe06ca10dac59200987107397e2a15d9776d8c3
+SHA512: b41dfcaa30e29abf5315db86a6c2d43dc6951adfd98fa03e26810b9a6daab99e7570921d2446a73a7151c350107b6de10e3ececd677ff2ba77f4dee3e75f9169
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 45
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.0_all.deb
+Size: 19230
+MD5sum: 80c0557cce6085ef4adf5575bf5dfa9e
+SHA1: 78a2510fad678420beee176ad96ecf83ea2de360
+SHA256: c445ec64e292a894a58a99d45196af564f12fcfe3a91c73002b6db937821ebd8
+SHA512: 4be3ce08682968e3aa036d52cb9f3028c20d34dc9cf7a9dca8e687e91300d8520ffc7c8c4e98a0322eab776304f6a67ac8db08fb5753a6278dc46962baaf587b
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 45
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.1_all.deb
+Size: 19236
+MD5sum: b7ff00bdcf178b4c9ba0670f87d89018
+SHA1: 1823777aa853fefe2e535f2b1eb9ec0ad89d8621
+SHA256: d0e8f8860159e2def71c5d7d0dcafe01254a85cf04039b87193853a3c4958205
+SHA512: e4ebc0b96906108aa717867b4828d2b7e17de5d97997338b8fae01f55beb89d78da78d662cc59b90f0d82615ab64eeb432716c2c1e3844f3d8c2aaea0ab63da4
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 46
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.2_all.deb
+Size: 19308
+MD5sum: d5c25b31a3255fcf7fa9cd5cf8b400e3
+SHA1: 54d9ab296f32c003386e8c9e0b1be1c529b11ec7
+SHA256: 2eaf96a6b6d510216265397c61821e942a5d62044ae8f194dfeaf3d6cd8a499f
+SHA512: 07acde01d3cb8ec1f233ac78178f83ffa61f3c14aa7269b0c3d74b813afae79170735a30a367b26c9e860d6023e5c419802ef86fa87a37d6fe83f129451c946a
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 47
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.3_all.deb
+Size: 19616
+MD5sum: ff1e19ea03e32c52d4d7bd8506ca49c8
+SHA1: e415137fb0fb82a94a58803eb9d39689a454514e
+SHA256: 619b2f40e836290c34e93eac1ca94a7ad49d95ba64e501de9fc43b67c5a0efed
+SHA512: 4be3240c779bd4a112a4aad7db39becbb74c1ab338f926ea774ff576e96ad464654801b359be76aa191d789c3351ecc7da7b71a382aa50107e9606cbd681fbd5
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.4
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 47
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.4_all.deb
+Size: 19608
+MD5sum: ba0e3937f2ce42649df32cec11da5b46
+SHA1: 370efea84f125d65b0fc3d76be3c5d9d1fc66b21
+SHA256: ae8dc949c6d82bf1dc06bd30a71725d141af9e056aa9a5ebe33bcfc43217f7d0
+SHA512: f14a6a40134532804f66929001055e908d13204639f45872c900ef0caa328ab6084637dc4f868aa982167121e5f718f7849fc34edbb9a168b99127ec47c63647
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.5
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 47
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.5_all.deb
+Size: 19612
+MD5sum: 31fdd47703745c9ac8bf9955cb12d76e
+SHA1: c8f562b859515733deee4e3ae78ac3a8584d36d3
+SHA256: 6dc9b923fdbdd373833ef4541ca81e58189f2831b509d43ad9dd2d7c95e11de5
+SHA512: e13c6b3e9e782e6a5f012d6b5366433bd47128d6c162363c1965737a8644af77bf240372086510a384dc14ee7ac9b3328e602505f4f5dd1e736c33e555f5ab91
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.6
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 47
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.6_all.deb
+Size: 19668
+MD5sum: 2c55b8385765fa36a1e79a4dc7a28881
+SHA1: 52f3226fdbde8c865ccfcbdb94f72ae932a7722f
+SHA256: 6c0fef174f4a89a584ab61768b9d8c73bf7b9ddc07d24cbbfc94df8a17703c36
+SHA512: e6a8b540099634638935fe8437d2408c5f7e2bacd3abad112ec5fcf30feb5457bfc5611e6f0ccc913b36afd0f918a73f3bfcde163bc23b8dc2171ccd566971c4
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.7
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 47
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.7_all.deb
+Size: 19628
+MD5sum: 7f3c64fd8fe46fcadd894d0a804c2136
+SHA1: a769a268a3a8b8a0bed0eee74532f55b75b71f28
+SHA256: 1952453a0a36aef1d2342728abf98295c1df77cda204067c7918304f0e1f6972
+SHA512: 126b28ca63b879221b3a594e9ae0c5ebe01b380c2fa9aaa674aaf36ca5d4422ea86938918b0336f574b21e1797c58f694c14567e432599a797b621db89092e5d
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.5.8
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 47
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.5.8_all.deb
+Size: 19632
+MD5sum: fb501038d48fcb94a0be62cb95990e75
+SHA1: 69f3c7b08085ac34a2eb5d3a51e235fba564eee4
+SHA256: 28eecfac09e059405e2e582ef8dd3cfb0226ea73a65abe55a9d267598ef15f2b
+SHA512: 5e9fd961db940211aa89f3ea48c0cc1b6bc09c61590508fff1846aeeb18ed692ac707884c2818422d7e5a61e95b616e0bb797a36504d3e3cc6e0b7d8261daf8b
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.6.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.6.0_all.deb
+Size: 19922
+MD5sum: be155a597f67ff8d80947199a2c9f4be
+SHA1: bf71ea5d43227ae61e2a8bb04334e9d9d7275f74
+SHA256: 2eb5ddd60e1ac8fbafb987c1664d2e5760d16e797e516e1de036763b7eaaeafe
+SHA512: 12eda9a051e28683e3f011df19a5fcbf2e3e94e0614784f105537900091f7114238fa332ed0401cca98965c116a72033e2ea423255eb22cc5d2febb2a08b4f9d
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.6.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.6.1_all.deb
+Size: 19916
+MD5sum: ba2e398caf1dd94f15e24cce1c71c4fd
+SHA1: 7bbc0950400056f8e0c84a52b3d2597caf4317e1
+SHA256: 4dae468269061bdf0f71dda849a966d4d923dab116e7af939ffd81b003e1ee2e
+SHA512: bffcca3ef22434d9485f360777ee0efcf3ae96592619c592079b1ddfb64342d94ccce0fe043bddb37b0df2020c6b4e4fc33852dff73562b202d39b996eb660c4
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.6.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.6.2_all.deb
+Size: 19896
+MD5sum: c0d5823e24955433334f7d1953e08c5c
+SHA1: bf595ace487278c4c10f81d183b1ee758096c38b
+SHA256: ceabd29de05cf8dcc0d34483cba299a936b9ebbfcec2da238c4628ca26ab5041
+SHA512: 77ecd17d2407280c11a0a61607cdbd7a152fc61fcfc895ad88662a200828f0b554c3096899763b2d4c9ce5ac2bca59c806f0c6b27278fd90ac7c582f41883bda
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.7.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.7.0_all.deb
+Size: 19888
+MD5sum: f55b737a7416d63ec5ab352366434094
+SHA1: e3e370bdb2d7e7e874a03eae17cb30fc11eb6e1a
+SHA256: ee338991ad67ac151183a205e1f53ba7228f365625f112c87db69af843dc3110
+SHA512: 49ed45c347cfc331de8be4356a2a6d080b7ac5f2fbf13da6481b8cf16411627ae48ae5537b51e05bbcf19c9771b7538d2242f8e9655001a496261ee95992311c
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.7.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.7.1_all.deb
+Size: 19928
+MD5sum: f1baa8318092748d09a7e8d475a07eca
+SHA1: 6808991fef4ffe80b36f3b5d3fb9b08afbd01b7c
+SHA256: 2ea11c911619c7ed85837bd0d5797dd00138c9b766e6f98c6f2e8eeca2677294
+SHA512: 63629c09be652e50a34270627e80fa0d994a37ecc4f2c916d9170b190ba8849112a80efdfbc1b19bcf4ccd52fe91ecbdebe97015ecaf2e55e98367aaafdca132
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.7.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.7.2_all.deb
+Size: 19892
+MD5sum: 159e09b1275f7f896a3e9467f73c18fe
+SHA1: 7845853a38d8c27a5338ab12684156e0340deec4
+SHA256: bbbc83b0008b2aeb4d76cf7c9c14f6b22ba101ff665d59ffa4382e29cc4965ad
+SHA512: 49801a92122ce83ce8b8ddbcf61c72e5e59d5b519bf7c464349f7e2231d4cf2de745cc335ddeffb03cbbd15180a8bf9baa45b2a27de4553cc413c8fc41e14095
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.7.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.7.3_all.deb
+Size: 19924
+MD5sum: 97f7047e1da2c640498ccc63173a66af
+SHA1: 7b39e06ddb73230e4064a0ce27dea0ab758e511b
+SHA256: b3cc7feb8e03fd866d22d969a3e3d22995f260adee3c7693ca691a5d3221daa1
+SHA512: 0dd840ca95438e820b32ee6fa03d5c9137faf2b9b3b7e165db906813aef81a86002fb74b581f3dccd52e1a384131de9369432c2d32f63e179988a2313fe3de6a
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.8.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.8.0_all.deb
+Size: 19902
+MD5sum: 9d680091f0f8bcb1213f166b20cf52dd
+SHA1: a26e1bec05b2662e01c658f2629c8cf3d3ba688e
+SHA256: 7d97f9a014142b87ca4e819fbd0818bcb0d686d43df110764251051832ee5472
+SHA512: c6e733412b04a4999cfd4408faa4ba57dd9e13bb1bb4aaa50c0c581fc2122d45f13d2406d7ea8618ddf6e4b30753aa1febaa37f6d97210638ce378d7e19f8066
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.8.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 49
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.8.1_all.deb
+Size: 19962
+MD5sum: db3e1004f7205ffa4b15db3d5f622ddc
+SHA1: e5306ca136e7b624937637b42918c9dd0303260a
+SHA256: 88306c6fc33c0b7f3e5a2c5a439de2841fa3a96a322d419ccbd3a38f325854ce
+SHA512: e39c07184204407f94bc5a3462621203e705c4984f021e9a47bec59bcd5b8bc635ebdb41217c20f24344a210432a17dc2e4a177b352d12111e05f6ba629968ce
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.8.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 49
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.8.2_all.deb
+Size: 19966
+MD5sum: afe3856f83229eda23c35b8d24b04bc5
+SHA1: 681f88af751e487660803b972b19d9ddc10fcf21
+SHA256: e892886365dc7ecd4576849f4e0cda49e1cac1dc0727aa25ecb976533e1bc9a5
+SHA512: 1990da6651f006d895f9112d5c76e1d4325e4287599ac34772de1266a886d60a593777a86f6266853433737648afb33f60df4a366627f6fbb6cd32851c82f46c
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.8.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 49
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.8.3_all.deb
+Size: 19972
+MD5sum: ae845c909f6799b8f5cd6bc4f4d8895d
+SHA1: 0d00a6208258a716ce7919235a638033d081057e
+SHA256: a5abe373a338ca46ecfee2e20f3ec18c139063f7869fbb1e63f7e0b716487c3c
+SHA512: 7189764eb63cd4cf37a298b84022276fc10a12bbd1564d766e6e915a426f55c9e897c1f2beb04550d98cd413004a24d20fe34393302b738f6d429a11bce23c3c
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.9.0
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Installed-Size: 48
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.9.0_all.deb
+Size: 19986
+MD5sum: 957ee58e0eb9a3840f1a91743fbbeab5
+SHA1: dfb19185bfe36805791ddfa3665d3b3998578fd4
+SHA256: 79c55761ba1d4379e84ccfd11f555bc0fb914d4ef0dbf8b31b73ea1d8220bafa
+SHA512: 41d37dd731899aa405b38490658281e757738f884a73cc046cd11d31d478aa24b5b6494ac1c593c494ead126b530474c1217bf10bec0a3d07fc21810aaa9a97b
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.9.1
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eed3si9n@gmail.com>
+Installed-Size: 49
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.9.1_all.deb
+Size: 19998
+MD5sum: 8c0555565e08b6f0b5b81f387b2fbace
+SHA1: 8a51f1a966f0634c474220185e77254c53bf0253
+SHA256: 45475809156f0d26c0d925009b7e37baac00e54ac414825f9a3ddc46fd93226e
+SHA512: 1659804ed52de1ee3feb56d6f290f889ffaecee13ec4a954f9123f0168a748b4ebdf70026ba84812c00617b7e22824b1f2e71adec346e5831da3d7a92ad6d3a3
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.9.2
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eed3si9n@gmail.com>
+Installed-Size: 49
+Depends: bash (>= 3.2)
+Recommends: git
+Filename: pool/main/sbt_1.9.2_all.deb
+Size: 20006
+MD5sum: 0cd66d75de83089b2282c1ff193a4fb6
+SHA1: dcfa270df69582243fcc32e350e88233360cb56c
+SHA256: e2dc2d60a0ad07aaf69e30cfd153b31ed9a2fa6dace30491f3bfe567029f6cf6
+SHA512: e84c2d84d839e4f0beefafde170c1434ef57b484cd0499350d3a86f69d85580a308370d06668cc0c3c242688832494a42bb33261fd92fc65e95e1b55baf2f444
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
+Package: sbt
+Architecture: all
+Version: 1.9.3
+Priority: optional
+Section: java
+Source: sbt
+Maintainer: Eugene Yokota <eed3si9n@gmail.com>
+Installed-Size: 49
+Depends: bash (>= 3.2), curl | wget
+Recommends: git
+Filename: pool/main/sbt_1.9.3_all.deb
+Size: 20034
+MD5sum: c764590de3c115e9944c3dcc5cbd72bf
+SHA1: 97e233dcaee6710a988a4eb3dee54c4f4c6c492b
+SHA256: e53b4675ef9b4d9dde2916adab139b76b05a74830f05ca73069626f8815e4c8c
+SHA512: 589863ff0ba8b7751a6c16b1f5bb68e723d4d62a7eecd41b6c66d86062a1c92217878cfbd10c8656ae3958ed2f8e42cf75df1391ef53c78a7692c3170037cb2f
+Description: sbt, the interactive build tool
+ This script provides a native way to run sbt,
+  a build tool for Scala and more.
+
