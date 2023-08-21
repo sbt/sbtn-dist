@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 10 Apr 2017 00:00:00 +0000
+Source: sbt
+Binary: sbt
+Architecture: all
+Version: 0.13.15
+Distribution: stable
+Urgency: low
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Changed-By: Eugene Yokota <eed3si9n@gmail.com>
+Description: 
+ sbt        - sbt, the interactive build tool
+Changes: 
+ sbt (0.13.15) stable; urgency=low
+ .
+   * sbt 0.13.15 removes the Maven version range when possible.
+   * Adds preliminary compatibility with JDK 9. Using this requires 0.13.15+ launcher. #2951 by @retronym
+   * Adds "local-preloaded" repository for offline installation
+Checksums-Sha1: 
+ 8150dbde4fbafb32281705df7ef937b5b405b545 66725378 sbt_0.13.15.2_all.deb
+Checksums-Sha256: 
+ 63f8955fd6d735d0c2737c5999d6e8652b26ab69d9e3cb402b01db7fbda5b7f7 66725378 sbt_0.13.15.2_all.deb
+Files: 
+ 587fd6ef277cc6ce4a8133681f92f9a2 66725378 java optional sbt_0.13.15.2_all.deb
+

@@ -1,0 +1,19 @@
+name: Verify Repositories
+on:
+  workflow_run:
+    workflows: [pages-build-deployment]
+    types: [completed]
+    branch: [develop]
+jobs:
+  verify-repositories:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+    - name: Checkout sbt/sbtn-dist
+      uses: actions/checkout@v3
+      with:
+        repository: sbt/sbtn-dist
+    - name: Test debian artifactory structure
+      run: .github/scripts/postMergeTestDebianArtifactory.sh
+    - name: Test rpm artifactory structure
+      run: .github/scripts/postMergeTestRpmArtifactory.sh

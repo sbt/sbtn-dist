@@ -1,16 +1,19 @@
 name: Native Image
 on:
-  push:
-    branches:
-      - develop
-  pull_request:
-  release:
-    types: [published]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'sbt ref to release in format `refs/tags/x.x.x` '
+        required: true
+        type: string
+  repository_dispatch:
+    types: [AutomaticRelease]
 jobs:
-  native-image:
+  build-artifacts:
+    if: github.event.action == 'AutomaticRelease' || github.event_name == 'workflow_dispatch'
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         include:
           - os: macOS-latest
@@ -32,11 +35,13 @@ jobs:
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
+      - name: New version information
+        run: echo "Starting release for ref ${{ github.event.client_payload.ref }}"
       - name: Checkout sbt/sbt
         uses: actions/checkout@v3
         with:
           repository: sbt/sbt
-          ref: 1.9.x
+          ref: ${{ github.event.client_payload.ref }}
       - name: Setup JDK
         uses: actions/setup-java@v3
         with:
@@ -52,6 +57,44 @@ jobs:
         run: |
           echo $(pwd)
           sbt clean nativeImage
+      - name: Set REF value
+        run: |
+          if [ '${{ github.event.action }}' == 'AutomaticRelease' ]; then
+              REF=${{ github.event.client_payload.ref }}
+              echo "REF=${REF}" >> $GITHUB_ENV
+          else
+              REF=${{ github.event.inputs.ref }}
+              echo "REF=${REF}" >> $GITHUB_ENV
+          fi
+          echo "TAG=${REF##*/}" >> $GITHUB_ENV
+
+      - name: Build Linux packages
+        if: ${{ matrix.uploaded_filename == 'sbtn-x86_64-pc-linux' }}
+        shell: bash
+        run: |
+          echo $(pwd)
+          cd launcher-package
+          LINUX_BINARIES_FOLDER=target/linux-packages
+
+          ## Create binaries
+          sbt -Dsbt.build.version=$TAG -Dsbt.build.offline=false -Dsbt.build.includesbtn=false -Dsbt.build.includesbtlaunch=false rpm:packageBin debian:packageBin
+
+          ## Move binaries to linux-packages folder
+          mkdir -p $LINUX_BINARIES_FOLDER
+          rm -rf "$LINUX_BINARIES_FOLDER/*"
+
+          RPM_ARTIFACT_PARENT=target/rpm/RPMS/noarch
+          RPM_ARTIFACT_NAME="sbt-$TAG-0.noarch.rpm"
+          RPM_ARTIFACT="$RPM_ARTIFACT_PARENT/$RPM_ARTIFACT_NAME"
+
+          mv "$RPM_ARTIFACT" "$LINUX_BINARIES_FOLDER/sbt-$TAG.rpm"
+
+          DEBIAN_ARTIFACT_PARENT=target/
+          DEBIAN_ARTIFACT_NAME="sbt_${TAG}_all.deb"
+          DEBIAN_ARTIFACT="$DEBIAN_ARTIFACT_PARENT/$DEBIAN_ARTIFACT_NAME"
+
+          mv "$DEBIAN_ARTIFACT" "$LINUX_BINARIES_FOLDER"
+          ls -lh "$LINUX_BINARIES_FOLDER"
       - name: Build Linux aarch64
         if: ${{ matrix.uploaded_filename == 'sbtn-aarch64-pc-linux' }}
         uses: uraimo/run-on-arch-action@v2.5.0
@@ -82,13 +125,117 @@ jobs:
         with:
           path: ${{ matrix.local_path }}
           name: ${{ matrix.uploaded_filename }}
-      - name: Upload release
-        if: github.event_name == 'release'
-        uses: actions/upload-release-asset@v1.0.2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          if-no-files-found: error
+          retention-days: 2
+
+      - name: Upload Linux packages
+        if: ${{ matrix.uploaded_filename == 'sbtn-x86_64-pc-linux' }}
+        uses: actions/upload-artifact@v3
         with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ matrix.local_path }}
-          asset_name: ${{ matrix.uploaded_filename }}
-          asset_content_type: application/zip
+          name: linux-packages
+          path: launcher-package/target/linux-packages/
+          if-no-files-found: error
+          retention-days: 2
+  repository-update:
+    needs: build-artifacts
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout sbt/sbtn-dist
+      uses: actions/checkout@v3
+      with:
+        repository: sbt/sbtn-dist
+    - name: Fetch linux package artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: linux-packages
+        path: artifacts
+    - name: GPG setup
+      run: .github/scripts/gpg-setup.sh
+      env:
+        PGP_SECRET: ${{ secrets.PGP_SECRET }}
+    - name: Update debian artifacts
+      run: |
+        ./updateDebianPackages.sh
+        echo "Updated debian artifacts"
+        ls -lh ./debian
+      env:
+        PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+        KEYNAME: ${{ secrets.KEYNAME }}
+    - name: Update rpm artifacts
+      run: |
+        ./updateRpmInDocker.sh
+        echo "Updated rpm packages"
+        echo "Adjusting file permissions"
+        sudo chown -R $(id -u):$(id -g) ./rpm
+        ls -lh ./rpm
+      env:
+        PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
+        KEYGRIP: ${{ secrets.KEYGRIP }}
+        KEYNAME: ${{ secrets.KEYNAME }}
+        PGP_SECRET: ${{ secrets.PGP_SECRET }}
+        GPG_EMAIL: ${{ secrets.GPG_EMAIL }}
+    - name: Test debian artifactory structure
+      run: .github/scripts/testDebianArtifactory.sh
+    - name: Test rpm artifactory structure
+      run: .github/scripts/testRpmArtifactory.sh
+    - name: Generate token for pull request
+      uses: tibdex/github-app-token@v1
+      id: generate-token
+      with:
+        app_id: ${{ secrets.APP_ID }}
+        private_key: ${{ secrets.APP_PRIVATE_KEY }}
+    - name: Create Pull Request
+      id: cpr
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ steps.generate-token.outputs.token }}
+    - name: Merge pull request
+      run: gh pr merge --merge ${{ steps.cpr.outputs.pull-request-number }}
+      env:
+        GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+  release:
+    needs: repository-update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate token for release
+        uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: Fetch native packages
+        uses: actions/download-artifact@v3
+        with:
+          path: native-packages
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Rename packages
+        run: |
+          mkdir to-upload
+          mv native-packages/sbtn-aarch64-pc-linux/sbtn to-upload/sbtn-aarch64-pc-linux || true
+          mv native-packages/sbtn-x86_64-pc-linux/sbtn to-upload/sbtn-x86_64-pc-linux || true
+          mv native-packages/sbtn-x86_64-apple-darwin/sbtn to-upload/sbtn-x86_64-apple-darwin || true
+          mv native-packages/sbtn-x86_64-pc-win32.exe/sbtn.exe to-upload/sbtn-x86_64-pc-win32.exe || true
+          ls -R
+      - name: Set REF value
+        run: |
+          if [ '${{ github.event.action }}' == 'AutomaticRelease' ]; then
+              REF=${{ github.event.client_payload.ref }}
+              echo "REF=${REF}" >> $GITHUB_ENV
+          else
+              REF=${{ github.event.inputs.ref }}
+              echo "REF=${REF}" >> $GITHUB_ENV
+          fi
+          echo "TAG=${REF##*/}" >> $GITHUB_ENV
+      - name: Create release
+        id: create-release
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          name: ${{ env.TAG }}
+          tag_name: ${{ env.REF }}
+          files: |
+            to-upload/sbtn-aarch64-pc-linux
+            to-upload/sbtn-x86_64-pc-linux
+            to-upload/sbtn-x86_64-apple-darwin
+            to-upload/sbtn-x86_64-pc-win32.exe

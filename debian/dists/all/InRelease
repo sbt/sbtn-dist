@@ -1,0 +1,56 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Acquire-By-Hash: yes
+Architectures: all
+Codename: all
+Components: main
+Date: Mon, 21 Aug 2023 11:20:58 +0000
+Description: native script to run sbt, a build tool for Scala and more
+Label: Scala-sbt
+Origin: Scala-sbt
+Suite: all
+MD5Sum:
+ cefb03df0bf7d7dba9e441b6d411afb1              226 Release
+ d97f018b2813e020dcd4aa88249bca50            38913 main/Contents-all
+ 6a89c139a0d37edd71a04e01ebbb79c3             2372 main/Contents-all.gz
+ b9d92bf1611855a929608ac5f49d15d0            58797 main/binary-all/Packages
+ 4bf9bb98ea8c8a7733435ff73a7dbbb4            14152 main/binary-all/Packages.bz2
+ 0be9b02add4ebe2d99c057e5391e43bf            16215 main/binary-all/Packages.gz
+SHA1:
+ ef0ccf68c668dfaf5fd1678c8b4761015dff8421              226 Release
+ 2d2ee409325062ed5c78df77e84b35f9303b87ce            38913 main/Contents-all
+ fe9b2a7fb3dbec0223e346e80bce660c6cdf44b8             2372 main/Contents-all.gz
+ fc203a2b3b9cbb7c1b607a47bc5add9495892b73            58797 main/binary-all/Packages
+ 75ee1d7a1a068d13e6527b241a67740f7ccf3383            14152 main/binary-all/Packages.bz2
+ a702efb3abf13f3b474c1c3701a825487aa3a53d            16215 main/binary-all/Packages.gz
+SHA256:
+ 55b93a679f23da294cce6436107e5353ad82a5ac306e2db3cf925f70bdb8512c              226 Release
+ feb7fda4d3546b83aee0cebe4d2485f0a9dae3315348e1edc9ef97a603de7f7c            38913 main/Contents-all
+ aae778811186a16b63f3a381674212b837760aab5d296b11467e1c2e33dcdc85             2372 main/Contents-all.gz
+ b8dea215eb69ee19ca8a00cfe5867c474f3712e744507924818b14e93260e142            58797 main/binary-all/Packages
+ 2420f1839e7d863e660efe284cd1e413bef96448e8c74edf76bcf5878792c5bb            14152 main/binary-all/Packages.bz2
+ 94b3baa9e0164201dcf44fd570a88e00559f15c1dee4729621355bc60af679c3            16215 main/binary-all/Packages.gz
+SHA512:
+ 91c591193a87c267cd9b997d49e30506cb917719f954cfe2421282f6e701d31ce401cef031177a2d218caae82f285a452030038a136594916abe41bba4bb9c54              226 Release
+ 100967cecca289a60e1d370290077d02fb49f73686979670c35991be63b600a44f58fd43a0bbdc3207b0e629babca441ca64f4b0efc28535f371ba5bb91dd3f7            38913 main/Contents-all
+ a1147fbe6c040a2e542f3d9dc5dc349d338a0cf81fbdddcb77d7d895704e0a9cc5956a905921f387ca919788146892fb77800ff9b1088940c121034659eb861b             2372 main/Contents-all.gz
+ 333538cbe54add9661b03b1f463d30d545edba6e7a647283f5fac5590f4e912a75835a622ba2f4c8af87c29595dd0c0dc234179a973c66273c65b455bd8b2430            58797 main/binary-all/Packages
+ b6cdd20e5a5bb77ebc403dae4acd1d91710c5c97335ca52bcb9cd2f48c59a358e392c541583c55856d6e1355fd66cb71c949164880af3caca02d9b3a9c761a9f            14152 main/binary-all/Packages.bz2
+ c3c7467bdd8125cda14480b0395f1d5eaff32a3abd87eddb7fd6b4b02142893ce6d57ad705aa03c33889f6f78fae19cf9c124e0320bbe8acee051bb52e79d6cd            16215 main/binary-all/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEDhwktsd8yI9wMD1U7DtwIgrtAGwFAmTjSJsACgkQ7DtwIgrt
+AGwyeQ//bzKwrOFGca9YCLYRcyIjClUYFZQ0frAI3iw1ochXp/5M7x35vQkXZ289
+X3nOKUr5I2CKI8KTdKU4Up9JXFtSDsTB/lIj0KvL+i0PklqjfZ2Z9gZqxBTUj11p
+eMX2eqbPo48tO+NbNTSsTof5Oe3zadPTxQiPOR8+433oo59HuK5XR/lTJ+VZGz4N
+4ujm0k56NGAVl5NfN1Lcr2o1FjnGQuSqBjiVJ0hjtmcW/b8M0kvs32f+TGW4XHVT
+VZXIlAX2f7UH6gOltsHqwnJiH6r6RYkk+iuk2mwCDeua0SysqCAlGQsp7C/uMQWt
+6VaQN+kbk3dAdCyeW64AeyUw6zZ0rqBxzhdXM7w5nXhyoOglFyLMPI6fcI0uAjJ2
+a8smT9oCe5+1qjAjiOCeU9C+sn1ttWvcU/k1ZudVBWovKk1StpSU13isjgvTNSq4
+Tw2A9Rk9o5sHym0w1nbT+eQl7qWZ7FRM7NB50VEf9AFv5VBixeRjkdKfZNW+5G9k
+PM5UiXwY1fMjpYY5AEY/D96Zhqqg+TWjYTY58dfyaaOTpc9n+0jc9g9X/1EAmYM9
+RBJdgbGtBk7cL6GE3r91N0JOs7ta8+hvdTOR2GpBN7ShCysTcbyXqE+KjD3fJYO2
+qUc5D7+ZKNig/yaiB3NqRi8Wx1y2EnxiMqKfC9UPl91UYE9gK00=
+=GIxQ
+-----END PGP SIGNATURE-----

@@ -1,0 +1,24 @@
+Format: 1.8
+Date: Fri, 11 Aug 2017 00:00:00 +0000
+Source: sbt
+Binary: sbt
+Architecture: all
+Version: 1.0.0
+Distribution: stable
+Urgency: low
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Changed-By: Eugene Yokota <eed3si9n@gmail.com>
+Description:
+ sbt        - sbt, the interactive build tool
+Changes:
+ sbt (1.0.0) stable; urgency=low
+ .
+   * sbt 1.0 uses Scala 2.12 for build definitions and plugins. This also requires JDK 8.
+   * See http://www.scala-sbt.org/1.x/docs/sbt-1.0-Release-Notes.html for the full list of changes.
+Checksums-Sha1:
+ a805d1111c58d5806c4e301c481b39024ee5f853 18976002 sbt_1.4.1_all.deb
+Checksums-Sha256:
+ 69d5ef0859b3b936cad540250cefd5df17b5bf0a9ee73cf9175dc6593e1da4db 18976002 sbt_1.4.1_all.deb
+Files:
+ 99a04215df87d2349abfbd9d93693655 18976002 java optional sbt_1.4.1_all.deb
+

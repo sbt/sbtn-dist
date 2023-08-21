@@ -1,0 +1,39 @@
+Format: 1.8
+Date: Fri, 28 Oct 2016 14:30:00 +0000
+Source: sbt
+Binary: sbt
+Architecture: all
+Version: 0.13.13
+Distribution: stable
+Urgency: low
+Maintainer: Eugene Yokota <eugene.yokota@lightbend.com>
+Changed-By: Dale Wijnand <dale.wijnand@gmail.com>
+Description: 
+ sbt        - sbt, the interactive build tool
+Changes: 
+ sbt (0.13.13) stable; urgency=low
+ .
+   * The `new` command, which helps creating new build definitions.
+     This is extensible via `templateResolverInfos` setting.
+     sbt 0.13.13 will ship with Giter8 template resolver out of the box.
+     #2705 by @eed3si9n
+   * Auto plugins can add synthetic subprojects. #2717 by @eed3si9n
+   * The no-longer-documented sbt 0.12 DSL `<<=`, `<+=`, and `<++=`
+     operators and tuple enrichment are now marked deprecated.
+     (These are removed in 1.0.x branch.) @eed3si9n and @dwijnand
+   * The `.value` method is deprecated for input tasks since `.evaluated`
+     is normally what's needed.
+     (Also removed in 1.0.x branch) #2709 by @eed3si9n
+   * sbt 0.13.13 will display deprecation warning for build.sbt.
+     #2784 by @eed3si9n
+   * Renames the early command `--<command>` that was added in 0.13.1 to
+     `early(<command>)`. `--error` will work, but we encourage you to
+     migrate to single hyphen version: `-error`, `-warn`, `-info`, and
+     `-debug`. #2742 by @eed3si9n
+Checksums-Sha1: 
+ 6b2607617672212e58eba947ff2da871ec12a047 66879878 sbt-launcher-packaging_0.13.14_all.deb
+Checksums-Sha256: 
+ 4347cf6619e9c400c9979e7895d363774ba5a4e9efa0f8a3e5cc3fc437b4d06d 66879878 sbt-launcher-packaging_0.13.14_all.deb
+Files: 
+ 7bfe9889fe0b6f1de5b2e1ea191afe24 66879878 java optional sbt-launcher-packaging_0.13.14_all.deb
+
