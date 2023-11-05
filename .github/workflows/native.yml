@@ -93,6 +93,7 @@ jobs:
             --output sbtn-aarch64-apple-darwin \
             --fail
           sbt clean nativeImage
+          mkdir -p target/bin
           lipo -create -o target/bin/sbtn "client/target/bin/sbtn" "sbtn-aarch64-apple-darwin"
       - name: Build
         if: github.event_name != 'release'
