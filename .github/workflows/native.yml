@@ -13,22 +13,60 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macOS-latest
-            uploaded_filename: sbtn-x86_64-apple-darwin
-            local_path: client/target/bin/sbtn
-            jobtype: 1
           - os: ubuntu-20.04
             uploaded_filename: sbtn-x86_64-pc-linux
             local_path: client/target/bin/sbtn
-            jobtype: 1
-          - os: ubuntu-20.04
-            uploaded_filename: sbtn-aarch64-pc-linux
-            local_path: client/target/bin/sbtn
-            jobtype: 2
           - os: windows-2019
             uploaded_filename: sbtn-x86_64-pc-win32.exe
             local_path: client\target\bin\sbtn.exe
-            jobtype: 1
+    env:
+      JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
+    steps:
+      - name: Checkout sbt/sbt
+        uses: actions/checkout@v3
+        with:
+          repository: sbt/sbt
+          # Make sure the native-image-macos and native-image-aarch64-pc-linux-linux also updated
+          ref: 1.9.x
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 8
+      - run: git fetch --tags || true
+      - name: Setup Windows C++ toolchain
+        uses: ilammy/msvc-dev-cmd@v1
+        if: ${{ matrix.os == 'windows-2019' }}
+      - name: Build
+        shell: bash
+        run: |
+          echo $(pwd)
+          sbt clean nativeImage
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ${{ matrix.local_path }}
+          name: ${{ matrix.uploaded_filename }}
+      - name: Upload release
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ matrix.local_path }}
+          asset_name: ${{ matrix.uploaded_filename }}
+          asset_content_type: application/zip
+
+  native-image-macos:
+    needs: native-image
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macOS-latest
+            uploaded_filename: sbtn-x86_64-apple-darwin
+            local_path: target/bin/sbtn
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
@@ -43,17 +81,63 @@ jobs:
           distribution: temurin
           java-version: 8
       - run: git fetch --tags || true
-      - name: Setup Windows C++ toolchain
-        uses: ilammy/msvc-dev-cmd@v1
-        if: ${{ matrix.os == 'windows-2019' }}
       - name: Build
-        if: ${{ matrix.uploaded_filename != 'sbtn-aarch64-pc-linux' }}
+        if: github.event_name == 'release'
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo $(pwd)
+          mkdir -p target/bin/
+          curl -L "https://github.com/sbt/sbtn-dist/releases/download/${{ github.event.release.tag_name }}/sbtn-aarch64-apple-darwin" \
+            --header "Authorization: token $GITHUB_TOKEN" \
+            --output target/bin/sbtn-aarch64-apple-darwin
+          sbt clean nativeImage
+          lipo -create -o target/bin/sbtn "client/target/bin/sbtn" "target/bin/sbtn-aarch64-apple-darwin"
+      - name: Build
+        if: github.event_name != 'release'
         shell: bash
         run: |
           echo $(pwd)
           sbt clean nativeImage
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ${{ matrix.local_path }}
+          name: ${{ matrix.uploaded_filename }}
+      - name: Upload release
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ matrix.local_path }}
+          asset_name: ${{ matrix.uploaded_filename }}
+          asset_content_type: application/zip
+
+  native-image-aarch64-pc-linux-linux:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-20.04
+            uploaded_filename: sbtn-aarch64-pc-linux
+            local_path: client/target/bin/sbtn
+    env:
+      JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
+    steps:
+      - name: Checkout sbt/sbt
+        uses: actions/checkout@v3
+        with:
+          repository: sbt/sbt
+          ref: 1.9.x
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 8
       - name: Build Linux aarch64
-        if: ${{ matrix.uploaded_filename == 'sbtn-aarch64-pc-linux' }}
         uses: uraimo/run-on-arch-action@v2.5.0
         with:
           arch: aarch64
