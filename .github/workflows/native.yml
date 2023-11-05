@@ -88,14 +88,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo $(pwd)
-          mkdir -p target/bin/
           curl -L "https://github.com/sbt/sbtn-dist/releases/download/${{ github.event.release.tag_name }}/sbtn-aarch64-apple-darwin" \
             --header "Authorization: token $GITHUB_TOKEN" \
-            --output target/bin/sbtn-aarch64-apple-darwin \
+            --output sbtn-aarch64-apple-darwin \
             --fail
-          ls target/bin/sbtn-aarch64-apple-darwin
           sbt clean nativeImage
-          lipo -create -o target/bin/sbtn "client/target/bin/sbtn" "target/bin/sbtn-aarch64-apple-darwin"
+          lipo -create -o target/bin/sbtn "client/target/bin/sbtn" "sbtn-aarch64-apple-darwin"
       - name: Build
         if: github.event_name != 'release'
         shell: bash
