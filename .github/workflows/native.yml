@@ -91,6 +91,7 @@ jobs:
         shell: bash
         run: |
           echo $(pwd)
+          curl -sL https://raw.githubusercontent.com/sbt/sbt/v1.9.9/sbt > $HOME/bin/sbt
           sbt clean nativeImage
 
       - uses: actions/upload-artifact@v3
