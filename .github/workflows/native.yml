@@ -69,7 +69,7 @@ jobs:
             local_path: client/target/bin/sbtn
           - os: macOS-14
             uploaded_filename: sbtn-aarch64-apple-darwin
-            local_path: target/bin/sbtn
+            local_path: client/target/bin/sbtn
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
