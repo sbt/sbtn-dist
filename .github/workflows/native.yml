@@ -91,10 +91,10 @@ jobs:
         shell: bash
         run: |
           echo $(pwd)
-          mkdir -p $HOME/bin/
-          curl -sL https://raw.githubusercontent.com/sbt/sbt/v1.9.9/sbt > /Users/runner/bin/sbt
+          mkdir -p "$HOME/bin/"
+          curl -sL https://raw.githubusercontent.com/sbt/sbt/v1.9.9/sbt > "$HOME/bin/sbt"
           export PATH="$PATH:$HOME/bin"
-          chmod +x /Users/runner/bin/sbt
+          chmod +x "$HOME/bin/sbt"
           sbt clean nativeImage
 
       - uses: actions/upload-artifact@v3
