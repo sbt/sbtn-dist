@@ -128,7 +128,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p target/bin
-          lipo -create -o target/bin/sbtn "${{steps.download.outputs.download-path}}/*-apple-darwin"
+          lipo -create -o target/bin/sbtn "sbtn-x86_64-apple-darwin" "sbtn-aarch64-apple-darwin"
 
       - uses: actions/upload-artifact@v3
         with:
