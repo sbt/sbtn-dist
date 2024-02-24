@@ -120,8 +120,6 @@ jobs:
     steps:
       - name: Download binaries
         uses: actions/download-artifact@v4
-        with:
-          merge-multiple: true
       - name: Display structure of downloaded files
         run: ls -R
 
@@ -131,7 +129,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p target/bin
-          lipo -create -o target/bin/sbtn "${{steps.download.outputs.download-path}}/sbtn-x86_64-apple-darwin" "${{steps.download.outputs.download-path}}/sbtn-aarch64-apple-darwin"
+          lipo -create -o target/bin/sbtn "${{steps.download.outputs.download-path}}/sbtn-x86_64-apple-darwin/sbtn" "${{steps.download.outputs.download-path}}/sbtn-aarch64-apple-darwin/sbtn"
 
       - uses: actions/upload-artifact@v3
         with:
