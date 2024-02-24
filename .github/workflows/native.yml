@@ -64,9 +64,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macOS-latest
+          - os: macOS-12
             uploaded_filename: sbtn-x86_64-apple-darwin
-            local_path: target/bin/sbtn
+            local_path: client/target/bin/sbtn
+          - os: macOS-14
+            uploaded_filename: sbtn-aarch64-apple-darwin
+            local_path: client/target/bin/sbtn
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
@@ -79,32 +82,26 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-version: 8
+          java-version: 17
+
       - run: git fetch --tags || true
-      - name: Build
-        if: github.event_name == 'release'
-        shell: bash
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo $(pwd)
-          curl -L "https://github.com/sbt/sbtn-dist/releases/download/${{ github.event.release.tag_name }}/sbtn-aarch64-apple-darwin" \
-            --header "Authorization: token $GITHUB_TOKEN" \
-            --output sbtn-aarch64-apple-darwin \
-            --fail
-          sbt clean nativeImage
-          mkdir -p target/bin
-          lipo -create -o target/bin/sbtn "client/target/bin/sbtn" "sbtn-aarch64-apple-darwin"
+
       - name: Build
         if: github.event_name != 'release'
         shell: bash
         run: |
           echo $(pwd)
+          mkdir -p "$HOME/bin/"
+          curl -sL https://raw.githubusercontent.com/sbt/sbt/v1.9.9/sbt > "$HOME/bin/sbt"
+          export PATH="$PATH:$HOME/bin"
+          chmod +x "$HOME/bin/sbt"
           sbt clean nativeImage
-      - uses: actions/upload-artifact@v3
+
+      - uses: actions/upload-artifact@v4
         with:
           path: ${{ matrix.local_path }}
           name: ${{ matrix.uploaded_filename }}
+
       - name: Upload release
         if: github.event_name == 'release'
         uses: actions/upload-release-asset@v1.0.2
@@ -115,6 +112,41 @@ jobs:
           asset_path: ${{ matrix.local_path }}
           asset_name: ${{ matrix.uploaded_filename }}
           asset_content_type: application/zip
+
+
+  native-image-universal-macos:
+    needs: native-image-macos
+    runs-on: macos-12
+    steps:
+      - name: Download binaries
+        uses: actions/download-artifact@v4
+      - name: Display structure of downloaded files
+        run: ls -R
+
+      - name: Build universal binary
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p target/bin
+          lipo -create -o target/bin/sbtn "sbtn-x86_64-apple-darwin/sbtn" "sbtn-aarch64-apple-darwin/sbtn"
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: target/bin/sbtn
+          name: sbtn-universal-apple-darwin
+
+      - name: Upload release
+        if: github.event_name == 'release'
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ matrix.local_path }}
+          asset_name: ${{ matrix.uploaded_filename }}
+          asset_content_type: application/zip
+
 
   native-image-aarch64-pc-linux-linux:
     runs-on: ${{ matrix.os }}
