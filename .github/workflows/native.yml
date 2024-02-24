@@ -142,10 +142,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ matrix.local_path }}
-          asset_name: ${{ matrix.uploaded_filename }}
+          asset_path: target/bin/sbtn
+          asset_name: sbtn-universal-apple-darwin
           asset_content_type: application/zip
-
 
   native-image-aarch64-pc-linux-linux:
     runs-on: ${{ matrix.os }}
