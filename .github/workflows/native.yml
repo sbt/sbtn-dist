@@ -23,13 +23,13 @@ jobs:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
       - name: Checkout sbt/sbt
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: sbt/sbt
           # Make sure the native-image-macos and native-image-aarch64-pc-linux-linux also updated
           ref: 1.9.x
       - name: Setup JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 8
@@ -42,7 +42,7 @@ jobs:
         run: |
           echo $(pwd)
           sbt clean nativeImage
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: ${{ matrix.local_path }}
           name: ${{ matrix.uploaded_filename }}
@@ -75,12 +75,12 @@ jobs:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
       - name: Checkout sbt/sbt
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: sbt/sbt
           ref: 1.9.x
       - name: Setup JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
@@ -129,7 +129,7 @@ jobs:
           mkdir -p target/bin
           lipo -create -o target/bin/sbtn "sbtn-x86_64-apple-darwin/sbtn" "sbtn-aarch64-apple-darwin/sbtn"
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: target/bin/sbtn
           name: sbtn-universal-apple-darwin
@@ -148,12 +148,12 @@ jobs:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
       - name: Checkout sbt/sbt
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: sbt/sbt
           ref: 1.9.x
       - name: Setup JDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 8
@@ -179,7 +179,7 @@ jobs:
             chmod +x "$HOME/bin/sbt"
           run: |
             sbt clean nativeImage
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: ${{ matrix.local_path }}
           name: ${{ matrix.uploaded_filename }}
