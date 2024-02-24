@@ -120,7 +120,8 @@ jobs:
     steps:
       - name: Download binaries
         uses: actions/download-artifact@v4
-        merge-multiple: true
+        with:
+          merge-multiple: true
       - name: Display structure of downloaded files
         run: ls -R
 
