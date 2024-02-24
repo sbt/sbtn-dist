@@ -120,7 +120,9 @@ jobs:
     steps:
       - name: Download binaries
         uses: actions/download-artifact@v4
-        id: download
+        merge-multiple: true
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Build universal binary
         shell: bash
