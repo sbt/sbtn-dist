@@ -116,7 +116,7 @@ jobs:
 
   native-image-universal-macos:
     needs: native-image-macos
-    runs-on: macos-14
+    runs-on: macos-12
     steps:
       - name: Download binaries
         uses: actions/download-artifact@v4
