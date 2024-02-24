@@ -87,7 +87,6 @@ jobs:
       - run: git fetch --tags || true
 
       - name: Build
-        if: github.event_name != 'release'
         shell: bash
         run: |
           echo $(pwd)
