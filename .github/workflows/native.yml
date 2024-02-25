@@ -71,7 +71,6 @@ jobs:
             uploaded_filename: sbtn-aarch64-apple-darwin
             local_path: client/target/bin/sbtn
     env:
-      SBT_RUNNER: 1.9.9
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
       - name: Checkout sbt/sbt
@@ -91,7 +90,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p "$HOME/bin/"
-          curl -sL https://raw.githubusercontent.com/sbt/sbt/v${SBT_RUNNER}/sbt > "$HOME/bin/sbt"
+          curl -sL https://raw.githubusercontent.com/sbt/sbt/v1.9.9/sbt > "$HOME/bin/sbt"
           export PATH="$PATH:$HOME/bin"
           chmod +x "$HOME/bin/sbt"
           sbt clean nativeImage
@@ -144,7 +143,6 @@ jobs:
             uploaded_filename: sbtn-aarch64-pc-linux
             local_path: client/target/bin/sbtn
     env:
-      SBT_RUNNER: 1.9.9
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
       - name: Checkout sbt/sbt
@@ -174,7 +172,7 @@ jobs:
             apt-get update -q -y
             apt-get install -q -y curl openjdk-8-jdk build-essential libz-dev
             mkdir -p "$HOME/bin/"
-            curl -sL https://raw.githubusercontent.com/sbt/sbt/v${SBT_RUNNER}/sbt > "$HOME/bin/sbt"
+            curl -sL https://raw.githubusercontent.com/sbt/sbt/v1.9.9/sbt > "$HOME/bin/sbt"
             export PATH="$PATH:$HOME/bin"
             chmod +x "$HOME/bin/sbt"
           run: |
