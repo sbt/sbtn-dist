@@ -55,7 +55,7 @@ jobs:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ${{ matrix.local_path }}
           asset_name: ${{ matrix.uploaded_filename }}
-          asset_content_type: application/zip
+          asset_content_type: application/octet-stream
 
   native-image-macos:
     needs: native-image
@@ -100,6 +100,32 @@ jobs:
           path: ${{ matrix.local_path }}
           name: ${{ matrix.uploaded_filename }}
 
+  native-image-universal-macos:
+    needs: native-image-macos
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macOS-12
+            uploaded_filename: sbtn-universal-apple-darwin
+            local_path: client/target/bin/sbtn
+    steps:
+      - name: Download binaries
+        uses: actions/download-artifact@v4
+      - name: Display structure of downloaded files
+        run: ls -R
+      - name: Build universal binary
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p client/target/bin/
+          lipo -create -o "${{ matrix.local_path }}" "sbtn-x86_64-apple-darwin/sbtn" "sbtn-aarch64-apple-darwin/sbtn"
+      - uses: actions/upload-artifact@v4
+        with:
+          path: ${{ matrix.local_path }}
+          name: ${{ matrix.uploaded_filename }}
       - name: Upload release
         if: github.event_name == 'release'
         uses: actions/upload-release-asset@v1
@@ -109,29 +135,7 @@ jobs:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ${{ matrix.local_path }}
           asset_name: ${{ matrix.uploaded_filename }}
-          asset_content_type: application/zip
-
-  native-image-universal-macos:
-    needs: native-image-macos
-    runs-on: macos-12
-    steps:
-      - name: Download binaries
-        uses: actions/download-artifact@v4
-      - name: Display structure of downloaded files
-        run: ls -R
-
-      - name: Build universal binary
-        shell: bash
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p target/bin
-          lipo -create -o target/bin/sbtn "sbtn-x86_64-apple-darwin/sbtn" "sbtn-aarch64-apple-darwin/sbtn"
-
-      - uses: actions/upload-artifact@v4
-        with:
-          path: target/bin/sbtn
-          name: sbtn-universal-apple-darwin
+          asset_content_type: application/octet-stream
 
   native-image-aarch64-pc-linux-linux:
     runs-on: ${{ matrix.os }}
@@ -190,4 +194,4 @@ jobs:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ${{ matrix.local_path }}
           asset_name: ${{ matrix.uploaded_filename }}
-          asset_content_type: application/zip
+          asset_content_type: application/octet-stream
