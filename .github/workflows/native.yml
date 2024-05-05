@@ -27,7 +27,7 @@ jobs:
         with:
           repository: sbt/sbt
           # Make sure the native-image-macos and native-image-aarch64-pc-linux-linux also updated
-          ref: 1.9.x
+          ref: 1.10.x
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
@@ -77,7 +77,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: sbt/sbt
-          ref: 1.9.x
+          ref: 1.10.x
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
@@ -153,7 +153,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: sbt/sbt
-          ref: 1.9.x
+          ref: 1.10.x
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
