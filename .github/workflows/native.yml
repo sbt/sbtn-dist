@@ -168,9 +168,8 @@ jobs:
       - name: Build Linux aarch64
         uses: uraimo/run-on-arch-action@v2
         with:
-          arch: none
-          distro: none
-          base_image: '--platform=linux/aarch64 ubuntu:20.04'
+          arch: aarch64
+          distro: ubuntu20.04
 
           # Speeds up builds per the run-on-arch-action README
           githubToken: ${{ github.token }}
