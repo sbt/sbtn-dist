@@ -17,6 +17,9 @@ jobs:
           - os: ubuntu-20.04
             uploaded_filename: sbtn-x86_64-pc-linux
             local_path: client/target/bin/sbtn
+          - os: ubuntu-22.04-arm
+            uploaded_filename: sbtn-aarch64-pc-linux
+            local_path: client/target/bin/sbtn
           - os: windows-latest
             uploaded_filename: sbtn-x86_64-pc-win32.exe
             local_path: client\target\bin\sbtn.exe
@@ -69,7 +72,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macOS-12
+          - os: macOS-13
             uploaded_filename: sbtn-x86_64-apple-darwin
             local_path: client/target/bin/sbtn
           - os: macOS-14
@@ -111,7 +114,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macOS-12
+          - os: macOS-13
             uploaded_filename: sbtn-universal-apple-darwin
             local_path: client/target/bin/sbtn
     steps:
@@ -126,71 +129,6 @@ jobs:
         run: |
           mkdir -p client/target/bin/
           lipo -create -o "${{ matrix.local_path }}" "sbtn-x86_64-apple-darwin/sbtn" "sbtn-aarch64-apple-darwin/sbtn"
-      - uses: actions/upload-artifact@v4
-        with:
-          path: ${{ matrix.local_path }}
-          name: ${{ matrix.uploaded_filename }}
-      - name: Upload release
-        if: github.event_name == 'release'
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ matrix.local_path }}
-          asset_name: ${{ matrix.uploaded_filename }}
-          asset_content_type: application/octet-stream
-
-  native-image-aarch64-pc-linux-linux:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - os: ubuntu-22.04
-            uploaded_filename: sbtn-aarch64-pc-linux
-            local_path: client/target/bin/sbtn
-    env:
-      JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
-    steps:
-      - name: Checkout sbt/sbt
-        uses: actions/checkout@v4
-        with:
-          repository: sbt/sbt
-          ref: 1.10.x
-      - name: Setup JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 8
-          # cache: sbt
-      - name: Setup sbt
-        uses: sbt/setup-sbt@v1
-      - name: Build Linux aarch64
-        uses: uraimo/run-on-arch-action@v2
-        with:
-          arch: aarch64
-          distro: ubuntu20.04
-
-          # Speeds up builds per the run-on-arch-action README
-          githubToken: ${{ github.token }}
-
-          # The shell to run commands with in the container
-          shell: /bin/bash
-
-          # build-essential and libz-dev are required to build native images.
-          install: |
-            apt-get update -q -y
-            apt-get install -q -y curl openjdk-8-jdk build-essential libz-dev
-            # Install sbt inside the docker image
-            mkdir -p "$HOME/bin/"
-            curl -sL https://raw.githubusercontent.com/sbt/sbt/v1.9.9/sbt > "$HOME/bin/sbt"
-            chmod +x "$HOME/bin/sbt"
-          run: |
-            # Use sbt inside the Docker image
-            export PATH="$PATH:$HOME/bin"
-            mkdir -p client/target/bin/
-            sbt nativeImage
       - uses: actions/upload-artifact@v4
         with:
           path: ${{ matrix.local_path }}
