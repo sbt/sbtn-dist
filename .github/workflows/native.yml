@@ -13,8 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # Keep this to ubuntu-20.04 to use older GLIBC
-          - os: ubuntu-20.04
+          - os: ubuntu-22.04
             uploaded_filename: sbtn-x86_64-pc-linux
             local_path: client/target/bin/sbtn
           - os: ubuntu-22.04-arm
@@ -27,17 +26,17 @@ jobs:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
       - name: Checkout sbt/sbt
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: sbt/sbt
           # Make sure the native-image-macos and native-image-aarch64-pc-linux-linux also updated
-          ref: 1.10.x
+          ref: 1.11.x
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
+          distribution: zulu
           java-version: 8
-          # cache: sbt
+          cache: sbt
       - name: Setup sbt
         uses: sbt/setup-sbt@v1
       - run: git fetch --tags || true
@@ -85,13 +84,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: sbt/sbt
-          ref: 1.10.x
+          ref: 1.11.x
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
-          # cache: sbt
+          cache: sbt
       - name: Setup sbt
         uses: sbt/setup-sbt@v1
       - run: git fetch --tags || true
