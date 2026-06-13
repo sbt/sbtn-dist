@@ -19,9 +19,14 @@ jobs:
           - os: ubuntu-22.04-arm
             uploaded_filename: sbtn-aarch64-pc-linux
             local_path: client/target/bin/sbtn
-          - os: windows-latest
+          - os: windows-2025
             uploaded_filename: sbtn-x86_64-pc-win32.exe
             local_path: client\target\bin\sbtn.exe
+            arch: x64
+          - os: windows-11-arm
+            uploaded_filename: sbtn-aarch64-pc-win32.exe
+            local_path: client\target\bin\sbtn.exe
+            arch: arm64
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
@@ -42,7 +47,9 @@ jobs:
       - run: git fetch --tags || true
       - name: Setup Windows C++ toolchain
         uses: ilammy/msvc-dev-cmd@v1
-        if: ${{ matrix.os == 'windows-latest' }}
+        if: runner.os == 'Windows'
+        with:
+          arch: ${{ matrix.arch }}
       - name: Build
         shell: bash
         run: |
