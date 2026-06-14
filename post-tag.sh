@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-VER=2.0.0-RC14
+VER=2.0.0-f0d2fae4
 
 rm -rf target || true
 mkdir -p target
