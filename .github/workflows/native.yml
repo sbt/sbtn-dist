@@ -15,13 +15,13 @@ jobs:
         include:
           - os: ubuntu-24.04
             uploaded_filename: sbtn-x86_64-pc-linux
-            local_path: client/target/bin/sbtn
+            local_path: target/out/jvm/u/sbt-client/bin/sbtn
           - os: ubuntu-22.04-arm
             uploaded_filename: sbtn-aarch64-pc-linux
-            local_path: client/target/bin/sbtn
+            local_path: target/out/jvm/u/sbt-client/bin/sbtn
           - os: windows-latest
             uploaded_filename: sbtn-x86_64-pc-win32.exe
-            local_path: client\target\bin\sbtn.exe
+            local_path: target\out\jvm\u\sbt-client\bin\sbtn.exe
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
@@ -47,7 +47,7 @@ jobs:
         shell: bash
         run: |
           echo $(pwd)
-          mkdir -p client/target/bin/
+          mkdir -p target/out/jvm/u/sbt-client/bin/
           sbt nativeImage
       - uses: actions/upload-artifact@v4
         with:
@@ -73,10 +73,10 @@ jobs:
         include:
           - os: macos-15-intel
             uploaded_filename: sbtn-x86_64-apple-darwin
-            local_path: client/target/bin/sbtn
+            local_path: target/out/jvm/u/sbt-client/bin/sbtn
           - os: macOS-14
             uploaded_filename: sbtn-aarch64-apple-darwin
-            local_path: client/target/bin/sbtn
+            local_path: target/out/jvm/u/sbt-client/bin/sbtn
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M
     steps:
@@ -98,7 +98,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          mkdir -p client/target/bin/
+          mkdir -p target/out/jvm/u/sbt-client/bin/
           sbt nativeImage
 
       - uses: actions/upload-artifact@v4
@@ -115,7 +115,7 @@ jobs:
         include:
           - os: macos-14
             uploaded_filename: sbtn-universal-apple-darwin
-            local_path: client/target/bin/sbtn
+            local_path: target/out/jvm/u/sbt-client/bin/sbtn
     steps:
       - name: Download binaries
         uses: actions/download-artifact@v4
@@ -126,7 +126,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir -p client/target/bin/
+          mkdir -p target/out/jvm/u/sbt-client/bin
           lipo -create -o "${{ matrix.local_path }}" "sbtn-x86_64-apple-darwin/sbtn" "sbtn-aarch64-apple-darwin/sbtn"
       - uses: actions/upload-artifact@v4
         with:
